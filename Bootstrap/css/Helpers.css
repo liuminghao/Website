@@ -1,0 +1,22 @@
+body {
+	background-color: #3299bb;
+	color: white
+}
+
+.jumbotron { background-color: #3299bb; }
+
+.centered { text-align: center; }
+
+.navbar-default {
+	background-color: #3299bb;
+	border: none;
+	font: white
+}
+
+#vecticalButton { vertical-align: center; }
+
+.navbar .logo { float: left; }
+
+.form-group { width: 20% }
+
+label { margin-bottom: 20px }
