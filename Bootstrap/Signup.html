@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/Helpers.css" rel='stylesheet'>
+    <link href='css/bootstrap-select.min.css' rel='stylesheet'>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -98,9 +99,11 @@
       </form>
 
      
-        <form class='form-horizontal form-control'>
-              <label for='dob'> Date of Birth: </label>
-              <select id='dob' name='month' class='span3'>
+        <form class='form-horizontal' mehtod='post' id='bootstrapSelectForm'>
+              <label for='dob' class='col-xs-4'> Date of Birth: </label>
+              <div class='form-group'>
+                <div class='selectContainer'>
+              <select id='dob' name='month' class='form-control'>
                 <option value='na' selected="selected">Month</option>
                 <option value='1'>January</option>
                 <option value='2'>February</option>
@@ -265,17 +268,14 @@
                 <option value="1906">1906</option>
                 <option value="1905">1905</option>
               </select>
+            </div>
         </form>
 
        <form class='form-inline form-horizontal'>
-        <label for='school'>Name: </label>
-          <div class='form-group input-lg'>
-            <input type="text" class="form-control" id='name' placeholder="First Name"/>
-          </div>
-        
-          <div class='form-group input-lg'>
-            <input type="text" class="form-control" placeholder="Last Name">
-          </div>
+        <label for='school'>School: </label>
+          <select>
+            <option> Boston College</option>
+            <option> Harvard</option>
       </form>
 
     </div>
