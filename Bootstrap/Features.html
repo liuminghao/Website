@@ -23,21 +23,19 @@
     
     <nav class="navbar navbar-inverse" position='fixed'>
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
               <a class="navbar-brand logo" href="Home.html" style="padding: 0px; border: none">
                 <img src="images/Logo.png" style='height: 102%'>
               </a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="Home.html">Home</a></li>
                     <li class='active'><a href="Features.html">Features</a></li>
                     <!-- <li><a href="Download.html">Download</a></li> -->
                     <li><a href="Help.html">Help</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
                 </ul>    
 
                 <ul class="nav navbar-nav navbar-right">
@@ -68,31 +66,51 @@
     <!-- Turn to homepage style, add three buttons at top to redirect to specific section. For everyone in the very middle. Floating button to return to the top of the page -->
     <div class='container' style='font-weight: bold'>
 
+      <div class='jumbotron centered'>
+        <a href='#ForTutors' class='btn btn-default'>For Tutors</a>
+        <a href='#ForStudents' class='btn btn-default'>For Students</a>
+        <a href='#ForEveryone' class='btn btn-default'>For Everyone</a>
+      </div>
+
+      <a name='ForTutors'></a>
       <div class='jumbotron'>
-        <div class='col-xs-4'>
-          <h3>For Tutors</h3>
-          <ul>
-            <li>Mark down your free time once on our personalizable calender and never worry about it again.</li>
-            <li>Be rewarded for your hard work, gain official recognition for your studies through certification.</li>
-            <li>Automated payment system removes need to track time and negotiate payment.</li>
-          </ul>
+        <div class='container'>
+          <div class='col-xs-5'>
+            <h3>For Tutors</h3>
+            <ul>
+              <li>Mark down your free time once on our personalizable calender and never worry about it again.</li>
+              <li>Be rewarded for your hard work, gain official recognition for your studies through certification.</li>
+              <li>Automated payment system removes need to track time and negotiate payment.</li>
+            </ul>
+          </div>
+          <div class='col-xs-6 centered'>
+            <img style='margin-top: 10%' src='images/App/beATutor.jpg'></img>
+          </div>
         </div>
       </div>
 
+      <a name='ForStudents'></a>
       <div class='jumbotron'>
-        <div class='col-xs-4'>
-          <h3>For Tutees</h3>
-          <ul>
-            <li>Optimized algorithm to find the ideal tutor for your needs.</li>
-            <li>Tutors are certified in a vast array of subjects to ensure they are prepared for your questions.</li>
-            <li>Quick process to find a tutor on the spot</li>
-            <li>Find help for anything, whether it is the last question on a homework, or cramming for a test</li>
-          </ul>
+        <div class='container'>
+          <div class='col-xs-5'>
+            <h3>For Students</h3>
+            <ul>
+              <li>Optimized algorithm to find the ideal tutor for your needs.</li>
+              <li>Tutors are certified in a vast array of subjects to ensure they are prepared for your questions.</li>
+              <li>Quick process to find a tutor on the spot</li>
+              <li>Find help for anything, whether it is the last question on a homework, or cramming for a test</li>
+            </ul>
+          </div>
+          <div class='col-xs-6 centered'>
+            <img src='images/app/selecttutor.jpg'></img>
+          </div>
         </div>
       </div>
 
+      <a name='ForEveryone'></a>
       <div class='jumbotron'>
-        <div class='col-xs-4'>
+        <div class='container'>
+          <div class='col-xs-5'>
           <h3>For everyone</h3>
           <ul>
             <li>Simple, easy, and reliable software designed by students, for students.</li>
@@ -101,8 +119,11 @@
             <li>Tell others where you would like to meet with the built in map.</li>
           </ul>
         </div>
+        <div class='col-xs-6 centered'>
+          <img src='images/app/session.jpg'></img>
+        </div>
       </div>
-      
+
     </div>
 
       <div class='container centered'>
