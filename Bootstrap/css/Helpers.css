@@ -23,7 +23,10 @@ label { margin-bottom: 20px }
 
 .btn { margin-right: 8px }
 
-.jumbotron { background-color: transparent }
+.jumbotron { 
+	background-color: transparent;
+	margin-top: -3%
+}
 
 .carousel-inner > .item > img {
     margin: 0 auto;
