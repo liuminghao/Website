@@ -25,6 +25,8 @@ label { margin-bottom: 20px }
 
 .btn { margin-right: 8px }
 
+select { margin-top: 8px }
+
 .jumbotron { 
 	background-color: transparent;
 	margin-top: -3%
