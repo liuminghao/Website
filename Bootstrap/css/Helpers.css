@@ -10,11 +10,9 @@
 
 .navbar .logo { float: left; }
 
-.form-group { width: 20% }
+.form-group { width: 20%; margin-right: -5% }
 
 label { margin-bottom: 20px }
-
-.form-group { margin-right: -5% }
 
 .btn { margin-right: 8px }
 
@@ -28,6 +26,18 @@ select { margin-top: 8px }
 .carousel-inner > .item > img {
     margin: 0 auto;
 }
+
+fieldset { display: table }
+fieldset p { display:table-row }
+fieldset label { text-align: right }
+fieldset input, fieldset select, fieldset label { 
+	display: table-cell;
+	margin: 3px
+}
+
+.width { width: 300px }
+
+.form-horizontal { text-align: right }
 
 .carousel-control.left, .carousel-control.right { background-image: none }
 
