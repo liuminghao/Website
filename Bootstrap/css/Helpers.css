@@ -10,8 +10,6 @@
 
 .navbar .logo { float: left; }
 
-.form-group { width: 20%; margin-right: -5% }
-
 label { margin-bottom: 20px }
 
 .btn { margin-right: 8px }
@@ -34,6 +32,8 @@ fieldset input, fieldset select, fieldset label {
 	display: table-cell;
 	margin: 3px
 }
+
+select { font-size: 20px }
 
 .width { width: 200px }
 
