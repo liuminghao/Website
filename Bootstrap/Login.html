@@ -43,12 +43,12 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li>
                     <p class='navbar-btn'>
-                      <a href='Login.html' class='btn btn-default'>Login </a>
+                      <a href='helpers.io/login.html' class='btn btn-default'>Login </a>
                     </p>
                   </li>
                   <li>
                     <p class='navbar-btn'>
-                      <a href='Signup.html' class='btn btn-success'>Signup </a>
+                      <a href='helpers.io/signup.html' class='btn btn-success'>Signup </a>
                     </p>
                   </li>
                 </ul>
@@ -71,49 +71,50 @@
         <hr>
       </div>
 
-      <div class='tabs'>
-        <ul class='tab-links'>
-          <li class='active'><a href='#genInfo'>General Information</a></li>
-          <li><a href='#payInfo'>Payment Information</a></li>
-          <li><a href='#courseCert'>Course certifications</a></li>
-        </ul>
+      <div class='col-xs-7'>
+        <div class='tabs'>
+          <ul id='myTab' class='nav nav-tabs'>
+            <li class='active'><a href='#genInfo' data-toggle='tab'>General Information</a></li>
+            <li><a href='#payInfo' data-toggle='tab'>Payment Information</a></li>
+            <li><a href='#courseCert' data-toggle='tab'>Course certifications</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div class='tab-content'>
-        <div id='genInfo' class='active tab'>
-          <button>Edit your personal information</button>
+      <div class='col-xs-7'>
+        <div id='myTabContent' class='tab-content'>
+          <div id='genInfo' class='tab-pane fade in active'>
+            <button>Edit your personal information</button>
 
-          <p>First Name:</p>
-          <p>Last Name:</p>
-          <p>Email Address:</p>
-          <p>School:</p>
-          <p>Graduation Year:</p>
-          <p>Academic Program:</p>
+            <p>First Name:</p>
+            <p>Last Name:</p>
+            <p>Email Address:</p>
+            <p>School:</p>
+            <p>Graduation Year:</p>
+            <p>Academic Program:</p>
+            <p>Date of Birth:</p>
 
-        </div>
+          </div>
 
-        <div id='payInfo' class='tab'>
-          <p>Here is payment</p>
-        </div>
+          <div id='payInfo' class='tab-pane fade'>
+            <p>Your credit card information</p>
+          </div>
 
-        <div id='courseCert' class='tab'>
-          <p>Certifications</p>
+          <div id='courseCert' class='tab-pane fade'>
+            <p>Your Certifications</p>
+          </div>
         </div>
       </div>
       
       <script>
-        jQuery(document).ready(function() {
-          jQuery('.tabs .tab-links a').on('click', function(e)  {
-              var currentAttrValue = jQuery(this).attr('href');
-       
-              // Show/Hide Tabs
-              jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
-       
-              // Change/remove current tab to active
-              jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
-       
-              e.preventDefault();
-          });
+        $('#myTab a').click(function (e) {
+            var tab = $(this);
+            if(tab.parent('li').hasClass('active')){
+                window.setTimeout(function(){
+                    $(".tab-pane").removeClass('active');
+                    tab.parent('li').removeClass('active');
+                },1);
+            }
         });
       </script>
 
