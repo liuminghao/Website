@@ -62,10 +62,10 @@ a:hover { color: grey }
     right: 0px;
     text-decoration: none;
     color: #000000;
-    background-color: rgba(235, 235, 235, 0.80);
-    font-size: 12px;
     padding: 1em;
     display: none;
+    font-size: 20px;
+    background-color: rgba(235, 235, 235, .8);
 }
 
 .back-to-top:hover {    
