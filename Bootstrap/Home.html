@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    
+
     <nav class="navbar navbar-inverse" position='fixed'>
         <div class="container-fluid">
             <div class="navbar-header">
@@ -63,12 +63,20 @@
         </div>
     </nav>
 
-    <div class="jumbotron blueGradient" style='padding-top: 1.5%'>
+    <!-- move carousel to the right and add logo & one sentence on the left. delete triple bullet, dleete download button and add bottom jumbotron in black which links to facebook -->
+    <div class="jumbotron" style='padding-top: 1.5%' id='grey1'>
       <div class="container">
         <div class='page-header'>
           <h1>Need a hand?</h1>
         </div>
-        
+
+        <div class='col-xs-6'>
+          <img src='images/LogoResGrey.png'></img>
+              <h2>Helpers is here for you.</h2>
+              <h4>We are currently testing our product to offer the best possible experience for you.</h4>
+        </div>
+
+        <div class='col-xs-6'>
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -95,17 +103,13 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-              <h2>Helpers is here for you.</h2>
-              <ul style='font-family: cursive'>
-                  <li>Want to find students to tutor?</li>
-                  <li>Need help with the last problem on a homework assignment?</li>
-                  <li>Trying to earn money for books?</li>
-              </ul>
+        </div>
+
       </div>
     </div>
       
 
-    <div class='jumbotron blueGradient'>
+    <div class='jumbotron' id='grey2'>
       <div class='container'>
         <div class='col-xs-4'>
           <img src="images/App/Calendar.jpg" class='pull-left'>
@@ -116,14 +120,14 @@
       </div>
     </div>
 
-    <div class='jumbotron blueGradient'>
+    <div class='jumbotron' id='grey1'>
       <div class='container'>
         <img src="images/App/CourseSelect.jpg" class='pull-right'>
         <h3>Looking for a tutor who knows their chops? We certify tutors in a vast array of subjects!</h3>
       </div>
     </div>
 
-    <div class='jumbotron blueGradient'>
+    <div class='jumbotron' id='grey2'>
       <div class='container'>
         <div class='col-xs-4'>
           <img src="images/App/TutorRatings.jpg" class='pull-left'>
@@ -134,7 +138,7 @@
       </div>
     </div>
 
-    <div class='jumbotron blueGradient'>
+    <div class='jumbotron' id='grey1'>
       <div class='container'>
         <div class='col-xs-4'>
           <img src="images/App/TimeTracker.jpg" class='pull-right'>
@@ -145,7 +149,7 @@
       </div>
     </div>
 
-    <div class='jumbotron blueGradient'>
+    <div class='jumbotron' id='grey2'>
       <div class='container'>
         <div class='col-xs-4'>
           <img src="images/App/HomePage.jpg" class='pull-left'>
@@ -167,17 +171,17 @@
       </div>
     </div>
 
-    <div class='centered'>
-      <a href="Download.html">
-        <button type='submit' class="btn">Download Helpers here</button>
-      </a>
-    </div>
+    <div class='jumbotron centered' style='background-color: black'>
 
-    <div class='container'>
+      
+      <div class='container centered'>
       <footer>
           <p>&copy; Helpers 2014-2015 | All Rights Reserved</p>
       </footer>
+      </div>
     </div>
+
+    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

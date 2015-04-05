@@ -11,6 +11,7 @@
     <link href="css/Helpers.css" rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,7 +20,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body id='grey1'>
     
     <nav class="navbar navbar-inverse" position='fixed'>
         <div class="container-fluid">
@@ -63,68 +64,166 @@
         </div>
     </nav>
 
-    <!-- Turn to homepage style, add three buttons at top to redirect to specific section. For everyone in the very middle. Floating button to return to the top of the page -->
-    <div class='container' style='font-weight: bold'>
+    <!-- Turn to homepage style split up advantages of each side, add three buttons at top to redirect to specific section. For everyone in the very middle. Floating button to return to the top of the page -->
 
-      <div class='jumbotron centered'>
-        <a href='#ForTutors' class='btn btn-default'>For Tutors</a>
-        <a href='#ForStudents' class='btn btn-default'>For Students</a>
-        <a href='#ForEveryone' class='btn btn-default'>For Everyone</a>
-      </div>
+    <div class='jumbotron centered' id='grey1'>
+      <a href='#ForTutors' class='btn btn-default'>For Tutors</a>
+      <a href='#ForEveryone' class='btn btn-default'>For Everyone</a>
+      <a href='#ForStudents' class='btn btn-default'>For Students</a>
+    </div>
 
-      <a name='ForTutors'></a>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='col-xs-5'>
-            <h3>For Tutors</h3>
-            <ul>
-              <li>Mark down your free time once on our personalizable calender and never worry about it again.</li>
-              <li>Be rewarded for your hard work, gain official recognition for your studies through certification.</li>
-              <li>Automated payment system removes need to track time and negotiate payment.</li>
-            </ul>
-          </div>
-          <div class='col-xs-6 centered'>
-            <img style='margin-top: 10%' src='images/App/beATutor.jpg'></img>
-          </div>
-        </div>
-      </div>
+    <h3>For Tutors</h3>
 
-      <a name='ForEveryone'></a>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='col-xs-5'>
-          <h3>For everyone</h3>
-          <ul>
-            <li>Simple, easy, and reliable software designed by students, for students.</li>
-            <li>Switch back and forth seemlessly between teaching and learning.</li>
-            <li>Help others while learning from them at the same time.</li>
-            <li>Tell others where you would like to meet with the built in map.</li>
-          </ul>
+    <a name='ForTutors'></a>
+    <div class='jumbotron' id='grey2'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Mark down your free time once on our personalizable calender and never worry about it again.</h4>
         </div>
         <div class='col-xs-6 centered'>
-          <img src='images/app/session.jpg'></img>
+          <img style='margin-top: 10%' src='images/App/beATutor.jpg'></img>
         </div>
       </div>
-
-      <a name='ForStudents'></a>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='col-xs-5'>
-            <h3>For Students</h3>
-            <ul>
-              <li>Optimized algorithm to find the ideal tutor for your needs.</li>
-              <li>Tutors are certified in a vast array of subjects to ensure they are prepared for your questions.</li>
-              <li>Quick process to find a tutor on the spot</li>
-              <li>Find help for anything, whether it is the last question on a homework, or cramming for a test</li>
-            </ul>
-          </div>
-          <div class='col-xs-6 centered'>
-            <img src='images/app/selecttutor.jpg'></img>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class='jumbotron' id='grey1'>
+      <div class='container'>
+        <div class='col-xs-7 centered'>
+          <img style='margin-top: 10%' src='images/pencil.png'></img>
+        </div>
+        <div class='col-xs-5'>
+          <h4>Be rewarded for your hard work, gain official recognition for your studies through certification.</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class='jumbotron' id='grey2'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Automated payment system removes need to track time and negotiate payment.</h4>
+        </div>
+        <div class='col-xs-6 centered'>
+          <img style='margin-top: 10%' src='images/pencil.png'></img>
+        </div>
+      </div>
+    </div>
+
+    <h3>For Everyone</h3>
+
+    <a name='ForEveryone'></a>
+
+    <div class='jumbotron' id='grey1'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Simple, easy, and reliable software designed by students, for students.</h4>
+        </div>
+        <div class='col-xs-6 centered'>
+          <img style='margin-top: 10%' src='images/app/session.jpg'></img>
+        </div>
+      </div>
+    </div>
+
+    <div class='jumbotron' id='grey2'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Switch back and forth seemlessly between teaching and learning.</h4>
+        </div>
+        <div class='col-xs-6 centered'>
+          <img style='margin-top: 10%' src='images/pencil.png'></img>
+        </div>
+      </div>
+    </div>
+
+    <div class='jumbotron' id='grey1'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Help others while learning from them at the same time.</h4>
+        </div>
+        <div class='col-xs-6 centered'>
+          <img style='margin-top: 10%' src='images/pencil.png'></img>
+        </div>
+      </div>
+    </div>
+
+    <div class='jumbotron' id='grey2'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Tell others where you would like to meet with the built in map.</h4>
+        </div>
+        <div class='col-xs-6 centered'>
+          <img style='margin-top: 10%' src='images/pencil.png'></img>
+        </div>
+      </div>
+    </div>
+
+    <h3>For Students</h3>
+
+    <a name='ForStudents'></a>
+
+    <div class='jumbotron' id='grey1'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Optimized algorithm to find the ideal tutor for your needs.</h4>
+        </div>
+        <div class='col-xs-6 centered'>
+          <img style='margin-top: 10%' src='images/app/selecttutor.jpg'></img>
+        </div>
+      </div>
+    </div>
+
+    <div class='jumbotron' id='grey2'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Tutors are certified in a vast array of subjects to ensure they are prepared for your questions.</h4>
+        </div>
+        <div class='col-xs-6 centered'>
+          <img style='margin-top: 10%' src='images/pencil.png'></img>
+        </div>
+      </div>
+    </div>
+
+    <div class='jumbotron' id='grey1'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Quick process to find a tutor on the spot</h4>
+        </div>
+        <div class='col-xs-6 centered'>
+          <img style='margin-top: 10%' src='images/pencil.png'></img>
+        </div>
+      </div>
+    </div>
+
+    <div class='jumbotron' id='grey2'>
+      <div class='container'>
+        <div class='col-xs-5'>
+          <h4>Find help for anything, whether it is the last question on a homework, or cramming for a test.</h4>
+        </div>
+        <div class='col-xs-6 centered'>
+          <img style='margin-top: 10%' src='images/pencil.png'></img>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class='back-to-top'><span class='glyphicon glyphicon-arrow-up'></span></a>
+    <script>
+    jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+    });
+    </script>
 
       <div class='container centered'>
         <footer>

@@ -11,6 +11,7 @@
     <link href="css/Helpers.css" rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
+<script type="text/rocketscript" data-rocketsrc="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,7 +20,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body id='grey1'>
      
     <nav class="navbar navbar-inverse" position='fixed'>
         <div class="container-fluid">
@@ -63,17 +64,49 @@
         </div>
     </nav>
 
-    <div class='jumbotron' style='text-align: left'>
-      <h2>My Account</h2>
-      <hr>
-    </div>
+    <div class='container'>
+      <div class='jumbotron' style='text-align: left'>
+        <h2>My Account</h2>
+        <hr>
+      </div>
 
-    <div class='jumbotron'>
-      <h3>General Information</h3>
-      <h3>Payment Information</h3>
-      <h3>Course Certification</h3>
+      <div class='tabs'>
+        <ul class='tab-links'>
+          <li class='active'><a href='#genInfo'>General Information</a></li>
+          <li><a href='#payInfo'>Payment Information</a></li>
+          <li><a href='#courseCert'>Course certifications</a></li>
+        </ul>
+
+        <div class='tab-content'>
+          <div id='genInfo' class='active tab'>
+            <p>General information about your account!</p>
+          </div>
+
+          <div id='payInfo' class='tab'>
+            <p>Here is payment</p>
+          </div>
+
+          <div id='courseCert' class='tab'>
+            <p>Certifications</p>
+          </div>
+        </div>
+      
+      <script>
+  jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+  });
+  </script>
     </div>
-    <!-- Expanding to the right, 2nd jumbotron remains the same -->
 
 	<div class='container centered'>
       <footer>
