@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Helpers</title>
+    <title>Request Certification</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
   <body id='grey1'>
      
-    <nav class="navbar navbar-inverse" position='fixed'>
+      <nav class="navbar navbar-inverse" position='fixed'>
         <div class="container-fluid">
           <div class="navbar-header">
               <a class="navbar-brand logo" href="home.html" style="padding: 0px; border: none">
@@ -64,77 +64,63 @@
         </div>
     </nav>
 
-    <!-- Generate forgot password page -->
     <div class='container'>
-      <div class='jumbotron' style='text-align: left'>
-        <h2>My Account</h2>
-        <hr>
-      </div>
+      <h2>Request Certification</h2>
+      <fieldset style='text-align: left'>
+        <p>
+          <label>Department:</label>
+          <select class='form-control width'>
+            <option value='na'>NA</option>
+            <option>African Studies</option>
+            <option>Architechture</option>
+            <option>Art History</option>
+            <option>Biology</option>
+            <option>Chemistry</option>
+            <option>Chinese</option>
+            <option>Communications</option>
+            <option>Computer Science</option>
+            <option>Economics</option>
+            <option>English</option>
+            <option>Enviromental Studies</option>
+            <option>Fine Arts</option>
+            <option>Film Studies</option>
+            <option>French</option>
+            <option>German</option>
+            <option>History</option>
+            <option>International Studies</option>
+            <option>Islamic Studies</option>
+            <option>Italian</option>
+            <option>Japanese</option>
+            <option>Journalism</option>
+            <option>Linguistics</option>
+            <option>Mathematics</option>
+            <option>Military Science</option>
+            <option>Music</option>
+            <option>Philosophy</option>
+            <option>Physics</option>
+            <option>Political Science</option>
+            <option>Psychology</option>
+            <option>Russian</option>
+            <option>Spanish</option>
+            <option>Theatre</option>
+            <option>Theology</option>
+          </select>
+        </p>
 
-      <div class='col-xs-3'>
-        <div class='tabs' style='font-size: 20px; font-weight: bold'>
-          <ul id='myTab' class='nav nav-pills nav-stacked'>
-            <li class='active'><a href='#genInfo' data-toggle='tab'>General Information</a></li>
-            <li><a href='#payInfo' data-toggle='tab'>Payment Information</a></li>
-            <li><a href='#courseCert' data-toggle='tab'>Course Certifications</a></li>
-          </ul>
-        </div>
-      </div>
+        <p>
+          <label>Course:</label>
+          <input type="text" class="form-control width" placeholder="Course"/>
+        </p>
 
-      <div class='col-xs-7'>
-        <div id='myTabContent' class='tab-content'>
-          <div id='genInfo' class='tab-pane fade in active'>
-            <button>Edit your personal information</button>
+        <p>
+          <label>Supporting Evidence:</label>
+          <input type='file' name='files[]'></input>
+        </p>
+      </fieldset>
 
-            <p>First Name:</p>
-            <p>Last Name:</p>
-            <p>Email Address:</p>
-            <p>School:</p>
-            <p>Graduation Year:</p>
-            <p>Academic Program:</p>
-            <p>Date of Birth:</p>
-
-          </div>
-
-          <div id='payInfo' class='tab-pane fade'>
-            <h3>Your Payment Methods</h3>
-            <ul>
-              <li>Example one</li>
-              <li>Example two</li>
-            </ul>
-
-            <h3>Transaction history</h3>
-            <ul>
-              <li>Yesterday</li>
-              <li>4/03/15</li>
-            </ul>
-          </div>
-
-          <div id='courseCert' class='tab-pane fade'>
-            <p>Your Certifications</p>
-            <ul>
-              <li>Differential Equations</li>
-              <li>Number Theory</li>
-            </ul>
-            <a href='certification.html' class='btn btn-default'>Request Certification</a>
-          </div>
-        </div>
-      </div>
-      
-      <script>
-        $('#myTab a').click(function (e) {
-            var tab = $(this);
-            if(tab.parent('li').hasClass('active')){
-                window.setTimeout(function(){
-                    $(".tab-pane").removeClass('active');
-                    tab.parent('li').removeClass('active');
-                },1);
-            }
-        });
-      </script>
-
+      <a href='login.html' class='btn btn-success'>Confirm Certification</a>
     </div>
-    <!-- Pull the copyright to the bottom -->
+
 	<div class='container centered'>
       <footer>
           <p>&copy; Helpers 2014-2015 | All Rights Reserved</p>
