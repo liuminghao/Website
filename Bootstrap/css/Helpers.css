@@ -29,13 +29,13 @@ select { margin-top: 8px }
 
 fieldset { display: table }
 fieldset p { display:table-row }
-fieldset label { text-align: right }
+fieldset label { text-align: left }
 fieldset input, fieldset select, fieldset label { 
 	display: table-cell;
 	margin: 3px
 }
 
-.width { width: 300px }
+.width { width: 200px }
 
 .form-horizontal { text-align: right }
 

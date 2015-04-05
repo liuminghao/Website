@@ -11,7 +11,8 @@
     <link href="css/Helpers.css" rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
-<script type="text/rocketscript" data-rocketsrc="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,11 +33,11 @@
 
            <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Features.html">Features</a></li>
-                    <!-- <li><a href="Download.html">Download</a></li> -->
-                    <li><a href="Help.html">Help</a></li>
-                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="helpers.io/Home.html">Home</a></li>
+                    <li><a href="helpers.io/Features.html">Features</a></li>
+                    <!-- <li><a href="helpers.io/Download.html">Download</a></li> -->
+                    <li><a href="helpers.io/Help.html">Help</a></li>
+                    <li><a href="helpers.io/AboutUs.html">About Us</a></li>
                 </ul>    
 
                 <ul class="nav navbar-nav navbar-right">
@@ -76,36 +77,46 @@
           <li><a href='#payInfo'>Payment Information</a></li>
           <li><a href='#courseCert'>Course certifications</a></li>
         </ul>
+      </div>
 
-        <div class='tab-content'>
-          <div id='genInfo' class='active tab'>
-            <p>General information about your account!</p>
-          </div>
+      <div class='tab-content'>
+        <div id='genInfo' class='active tab'>
+          <button>Edit your personal information</button>
 
-          <div id='payInfo' class='tab'>
-            <p>Here is payment</p>
-          </div>
+          <p>First Name:</p>
+          <p>Last Name:</p>
+          <p>Email Address:</p>
+          <p>School:</p>
+          <p>Graduation Year:</p>
+          <p>Academic Program:</p>
 
-          <div id='courseCert' class='tab'>
-            <p>Certifications</p>
-          </div>
         </div>
+
+        <div id='payInfo' class='tab'>
+          <p>Here is payment</p>
+        </div>
+
+        <div id='courseCert' class='tab'>
+          <p>Certifications</p>
+        </div>
+      </div>
       
       <script>
-  jQuery(document).ready(function() {
-    jQuery('.tabs .tab-links a').on('click', function(e)  {
-        var currentAttrValue = jQuery(this).attr('href');
- 
-        // Show/Hide Tabs
-        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
- 
-        // Change/remove current tab to active
-        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
- 
-        e.preventDefault();
-    });
-  });
-  </script>
+        jQuery(document).ready(function() {
+          jQuery('.tabs .tab-links a').on('click', function(e)  {
+              var currentAttrValue = jQuery(this).attr('href');
+       
+              // Show/Hide Tabs
+              jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+       
+              // Change/remove current tab to active
+              jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+       
+              e.preventDefault();
+          });
+        });
+      </script>
+
     </div>
 
 	<div class='container centered'>
