@@ -18,10 +18,7 @@ label { margin-bottom: 20px }
 
 select { margin-top: 8px }
 
-.jumbotron { 
-	background-color: transparent;
-	margin-top: -3%
-}
+.jumbotron { background-color: transparent; }
 
 .carousel-inner > .item > img {
     margin: 0 auto;
