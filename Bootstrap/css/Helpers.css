@@ -6,6 +6,8 @@
 
 .centered { text-align: center; }
 
+.vertSpace { height: 100px }
+
 #vecticalButton { vertical-align: center; }
 
 .navbar .logo { float: left; }
@@ -41,12 +43,12 @@ select { font-size: 20px }
 
 .carousel-control.left, .carousel-control.right { background-image: none }
 
+.carousel-indicators li { visibility: hidden }
+
 .jumbotron ul { font-size: 30px }
 
 h1 { font-weight: bold }
-
 h2 { font-weight: bold }
-
 h3 { font-weight: bold }
 
 a:link { color: black }
