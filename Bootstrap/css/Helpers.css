@@ -1,12 +1,10 @@
  body {
-	font-family: Indie Flower;
+	font-family: Arvo;
 	color: #424242;
 	background-color: bcbcbc
 }
 
 .centered { text-align: center; }
-
-.vertSpace { height: 100px }
 
 #vecticalButton { vertical-align: center; }
 
@@ -18,7 +16,10 @@ label { margin-bottom: 20px }
 
 select { margin-top: 8px }
 
-.jumbotron { background-color: transparent; }
+.jumbotron { 
+	background-color: transparent;
+	margin-top: -30px
+ }
 
 .carousel-inner > .item > img {
     margin: 0 auto;
@@ -32,8 +33,6 @@ fieldset input, fieldset select, fieldset label {
 	margin: 3px
 }
 
-select { font-size: 20px }
-
 .width { width: 200px }
 
 .form-horizontal { text-align: right }
@@ -42,7 +41,7 @@ select { font-size: 20px }
 
 .carousel-indicators li { visibility: hidden }
 
-.jumbotron ul { font-size: 30px }
+.jumbotron ul { font-size: 28px }
 
 h1 { font-weight: bold }
 h2 { font-weight: bold }
