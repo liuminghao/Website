@@ -14,12 +14,12 @@ label { margin-bottom: 20px }
 
 .btn { margin-right: 8px }
 
-select { margin-top: 8px }
-
 .jumbotron { 
 	background-color: transparent;
 	margin-top: -30px
  }
+
+.try-again { border-color: red }
 
 .carousel-inner > .item > img {
     margin: 0 auto;

@@ -16,11 +16,11 @@ $(function () {
         $.ajax({
             url: "http://54.172.140.235/api/v1/user/login/",
             contentType: "application/json",
-            type: "POST",
-            dataType: "json",
+            method: "POST",
             data: JSON.stringify(data),
             success: function (result) {
                 console.log(result);
+                loggedin = true;
                 alert(JSON.stringify(result));
             }
         });

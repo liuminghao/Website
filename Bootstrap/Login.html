@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="HelpersApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,11 +21,11 @@
     <![endif]-->
   </head>
 
-  <body id='grey1'>
+  <body id='grey1' ng-controller='loginCtrl'>
      
     <nav class="navbar navbar-inverse navbar-fixed-top" position='fixed'>
         <div class="container-fluid">
-          <div class="navbar-header">
+            <div class="navbar-header">
               <a class="navbar-brand logo" href="home.html" style="padding: 0px; border: none">
                 <img src="images/Logo.png" style='height: 102%'>
               </a>
@@ -38,8 +38,46 @@
                     <!-- <li><a href="helpers.io/Download.html">Download</a></li> -->
                     <li><a href="help.html">Help</a></li>
                     <li><a href="aboutUs.html">About Us</a></li>
-                </ul>      
-            </div>
+                </ul>    
+
+                <div ng-hide='signedIn'>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li>
+                      <p class='navbar-btn' ng-click='loginAttempt(info)'>
+                        <a class='btn btn-default'>Login </a>
+                      </p>
+                    </li>
+                    <li>
+                      <p class='navbar-btn'>
+                        <a href='signup.html' class='btn btn-success'>Signup</a>
+                      </p>
+                    </li>
+                  </ul>
+
+                <form class="navbar-form navbar-right" role="search">
+                  <div class="form-group">
+                      <input type="text" class="form-control" name="username" placeholder="Email" ng-model='info.username_or_email' ng-class="{ 'try-again': failed }">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" name="password" placeholder="Password" ng-model='info.password' ng-class="{ 'try-again': failed }">
+                  </div>
+                </form>
+              </div> 
+
+              <div ng-show='signedIn'>
+                <ul class='nav navbar-nav navbar-right'>
+                  <li>
+                      <a href='login.html'>Welcome: {{account.username}}</a>
+                  </li>
+                  <li>
+                    <p class='navbar-btn'>
+                      <button ng-click='logOut()' class='btn'>Log Out</button>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+          </div>
+
         </div>
     </nav>
 
@@ -58,8 +96,7 @@
             <li class='active'><a href='#genInfo' data-toggle='tab'>General Information</a></li>
             <li><a href='#payInfo' data-toggle='tab'>Card Information</a></li>
             <li><a href='#history' data-toggle='tab'>Transaction History</a></li>
-            <li><a href='#courseCert' data-toggle='tab'>Course Certifications</a></li>
-            <li>Log Out</li>
+            <li><a href='#courseCert' data-toggle='tab' ng-click='userInfo()'>Course Certifications</a></li>
           </ul>
         </div>
       </div>
@@ -77,38 +114,31 @@
                   <div class="form-group">
                       <label for="name" class="control-label col-xs-2">Full Name</label>
                       <div class="col-xs-5">
-                          <input type="email" class="form-control" id="name" placeholder="First Name">
+                          <input type="email" class="form-control" id="name" placeholder="First Name" ng-model='account.first_name'>
                       </div>
                       <div class='col-xs-5'>
-                        <input type='name' class='form-control' placeholder='Last Name'>
+                        <input type='name' class='form-control' placeholder='Last Name' ng-model='account.last_name'>
                       </div>
                   </div>
 
                   <div class="form-group">
                       <label for="inputEmail" class="control-label col-xs-2">Email</label>
                       <div class="col-xs-10">
-                          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                      </div>
-                  </div>
-
-                  <div class="form-group">
-                      <label for="inputPassword" class="control-label col-xs-2">Password</label>
-                      <div class="col-xs-10">
-                          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                          <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model='account.email'>
                       </div>
                   </div>
 
                   <div class="form-group">
                       <label for="school" class="control-label col-xs-2">School</label>
                       <div class="col-xs-10">
-                          <input class="form-control" id="school" placeholder="School">
+                          <input class="form-control" id="school" placeholder="School" ng-model='account.school'>
                       </div>
                   </div>
 
                   <div class="form-group">
                       <label class="control-label col-xs-2">Academic Program</label>
                       <div class="col-xs-10">
-                        <select class='form-control'>
+                        <select class='form-control' ng-model='account.academic_program'>
                           <option value='na'>Academic program</option>
                           <option>High School</option>
                           <option>Undergraduate</option>
@@ -121,7 +151,7 @@
                   <div class="form-group">
                       <label for="school" class="control-label col-xs-2">Graduation Year</label>
                       <div class="col-xs-10">
-                        <select class="form-control">
+                        <select class="form-control" ng-model='account.graduation_year'>
                           <option value="" selected="selected">Year</option>
                           <option value="2022">2022</option>
                           <option value="2021">2021</option>
@@ -193,7 +223,7 @@
                       <label for="school" class="control-label col-xs-2">Date of Birth</label>
                       <div class="col-xs-3">
                           <select class='form-control'>
-                          <option value='na' selected="selected">Month</option>
+                          <option value='na' selected="selected" ng-model='account.MoB'>Month</option>
                           <option value='1'>January</option>
                           <option value='2'>February</option>
                           <option value='3'>March</option>
@@ -211,7 +241,7 @@
 
                       <div class='col-xs-3'>
                         <select class='form-control'>
-                          <option value='na' selected='selected'>Day</option>
+                          <option value='na' selected='selected' ng-model='account.DoB'>Day</option>
                           <option value='1'>1</option>
                           <option value='2'>2</option>
                           <option value='3'>3</option>
@@ -248,7 +278,7 @@
 
                       <div class='col-xs-4'>
                         <select class="form-control">
-                          <option value="" selected="selected">Year</option>
+                          <option value="" selected="selected" ng-model='account.YoB'>Year</option>
                           <option value="2015">2015</option>
                           <option value="2014">2014</option>
                           <option value="2013">2013</option>
@@ -342,7 +372,7 @@
             <div class='row'>
               <div class='col-xs-12 centered'>
                 <hr>
-                <button class='btn btn-success' style='font-size: 20px; color: black;'>Update Profile</button>
+                <button class='btn btn-success' style='font-size: 20px; color: black;' ng-click='updateInfo()'>Update Profile</button>
               </div>
             </div>
           </div>
@@ -485,9 +515,10 @@
       </footer>
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src='js/angular.min.js'></script>
+    <script src='js/ngStorage.min.js'></script>
+    <script src='js/angled.js'></script>
   </body>
 </html>
