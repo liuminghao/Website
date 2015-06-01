@@ -1,0 +1,62 @@
+<br> <style>/* AVENIR NEXT NOT IMPLEMENTED */
+
+		input[type="email"] {
+			/* Email Input Box Styling */
+			font-family: AvenirNext;
+			font-size: 20px;
+			color: #4A4A4A;
+			line-height: 19px;
+		}
+
+		input[type="email"]:focus, textarea:focus {
+			/* Borrowed from css-tricks */
+			box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+			padding: 3px 0px 3px 3px;
+			margin: 5px 1px 3px 0px;
+			border: 1px solid rgba(81, 203, 238, 1);
+		}
+
+		input[type="submit"] {
+			/* Button Background: */
+			background: #1DD3AA;
+			border-radius: 4px;
+			padding: 5px 10px;
+			outline: none;
+			border:none;
+			font-size: 20;
+			color: white;
+		}
+		
+
+		h1 {
+			/* Enter your school email */
+			font-family: AvenirNext;
+			font-size: 30px;
+			color: #4A4A4A;
+			line-height: 34px;
+		}
+
+		h2 {
+			/* We need your school */
+			font-family: AvenirNext;
+			font-size: 14px;
+			color: #4A4A4A;
+			line-height: 19px;
+		}
+
+		h3 {
+			/* Sorry, Helpers is not available */
+			font-family: AvenirNext;
+			font-size: 22px;
+			color: #E50000;
+			line-height: 30px;
+			visibility hidden;
+		}
+
+		.center {
+			/* Centering CSS class */
+			margin: 0 auto;
+			padding: 20px;
+			width: 80%;
+			text-align: center;
+		}</style> <div class="form-container"> <form ng-submit="bcEmail()"> <!-- Check code for errors --> <h1> <div class="center"> Enter Your School Email </div> </h1> <br> <h2> <div class="center"> We need your school email to verify if <i>Helpers</i> is available at your school. </div> </h2> <br> <div class="center"> <input type="email" ng-model="newUser.email" placeholder="Input School Email" required> </div> <br> <div class="center"> <input type="submit" ng-click="submitPreForm(subscribe)" value="Submit"> </div> <br> <h2> <div class="center"> <input type="checkbox" ng-model="subscribe" value="Subscribe"> Subscribe to our mailing list. </div> </h2> <br> <div class="center"> <h3 ng-show="notAvailable">Sorry, the <i>Helpers</i> beta is not available at your school.</h3> </div> <!-- Anti-Bot signup from MailChimp (currently figuring out how to use this)--> <div style="position: absolute; left: -5000px"><input type="text" name="b_ac52c0e2e1d3f827076d7c72b_680f362ae2" tabindex="-1" value=""></div> <!-- End anti-bot signup --> </form> </div>
