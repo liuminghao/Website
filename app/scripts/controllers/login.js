@@ -9,7 +9,7 @@ var app = angular.module('HelpersApp');
 			$scope.signedIn = true;
 			$scope.account = result;
 			$scope.save();
-			$location.path('account');
+			$location.path('account.genInfo');
 		};
 
 		$scope.failedLogin = function() {

@@ -23,8 +23,12 @@ app.config( function($stateProvider, $urlRouterProvider) {
 			templateUrl: '../views/contactUs.html'
 		})
 		.state('faq', {
-			abstract: true;
+			abstract: true,
 			url: '/faq',
+			templateUrl: '../views/faq.html',
+			data: {
+				css: '../styles/faq.css'
+			}
 		})
 				.state('faq.everyone', {
 					url: '/everyone' ,
@@ -38,7 +42,6 @@ app.config( function($stateProvider, $urlRouterProvider) {
 					url: '/student' ,
 					templateUrl: '../views/faq/student.html'
 				})
-
 		.state('preSignup', {
 			url: '/preSignup',
 			templateUrl: '../views/preSignup.html',
