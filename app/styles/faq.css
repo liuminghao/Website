@@ -5,13 +5,13 @@
 	color: #FFFFFF;
 	line-height: 27px;
 	background-repeat: no-repeat;
-	background-image:url('../img/AboutUs.png');
-	height:298px;
+	background-image:url(../images/1.png);
+	height:50%;
 }
 
 .topbar p{
 	font-family: AvenirNext-Bold;
-	font-size:36px;
+	font-size:48px;
 	color:#FFFFFF;
 	line-height:49px;
 }
@@ -49,17 +49,10 @@ span{
 
 .everyone_text h3{
 	font-family:AvenirNext-Regular;
-	margin-right:30%;
-	margin-left:5%;
-	margin-top:-1%;
-	margin-bottom:5%;
 }
 
 .everyone_text ol{
 	font-family: AvenirNext-Regular;
-	margin-right: 30%;
-	margin-left:-30%;
-	margin-top:-1%;
 }
 
 /*tutors*/
@@ -94,19 +87,11 @@ span{
 }
 
 .students_text h3{
-	font-family:AvenirNext-Regular;
-	margin-right:30%;
-	margin-left:5%;
-	margin-top:10%;
-	margin-bottom:5%;
+	font-family:AvenirNext-Regular; 
 }
 
 .students_text ol{
 	font-family: AvenirNext-Regular;
-	margin-right: 30%;
-	margin-left:-30%;
-	margin-top:-1%;
-	margin-bottom: 10%;
 }
 
 /*bottom section*/
