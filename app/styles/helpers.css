@@ -54,9 +54,11 @@ a:hover {
         font-size: 23px;
     }
 
-    .navbar-inner a { 
-        color: black; 
+    .navbar-inner li:hover {
+        text-decoration: underline;        
     }
+
+    .navbar-inner a { color: black; }
 
     /* Containers, Jumbotrons, and Columns */
     .darkGrey { color: #bcbcbc }
@@ -65,23 +67,6 @@ a:hover {
     .green { color: #18ac0b; }
 
     .col-centered { float: none; margin: 0 auto; }
-
-.centered { text-align: center; }
-
-.vecticalButton { vertical-align: center; }
-
-.form-horizontal { text-align: right }
-
-.btn .btn-link {
-    background: white;
-    font-weight: 700;
-}
-
-.vertSpace5 { margin-bottom: 5%; }
-
-.vertSpace10 { margin-bottom: 10%; }
-
-.btn-link { color: black;}
 
     /* Signup Page*/
     .signup {
@@ -154,3 +139,20 @@ a:hover {
     .signup .alert {
         color: red;
     }
+
+.centered { text-align: center; }
+
+.vecticalButton { vertical-align: center; }
+
+.form-horizontal { text-align: right }
+
+.btn .btn-link {
+    background: white;
+    font-weight: 700;
+}
+
+.btn-link { color: black;}
+
+.vertSpace5 { margin-bottom: 5%; }
+.vertSpace8 { margin-bottom: 8%; }
+.vertSpace10 { margin-bottom: 10%; }
