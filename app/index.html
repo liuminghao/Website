@@ -19,8 +19,8 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="navbar transparent">
-      <div class='navbar-inner'>
+    <div class="navbar navbar-default transparent">
+      <div class='navbar-inner navbar-collapse collapse' id="siteNav"><!-- Nav for normal computers -->
         <ul class="nav nav-center">
           <li><a ui-sref="home">Home</a></li>
           <li><a ui-sref='aboutUs'>About Us</a></li>
@@ -32,6 +32,16 @@
           <li><button type='button' class='btn btn-default' ng-click='logOut()' ng-show='signedIn'>Log Out</button></li>
         </ul>    
       </div>
+
+      <div class="navbar-header"> <!-- Nav for mobile -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+      </div>
+
     </div>
 
     <modal title='Login' visible='showLogin()'><!-- Login popup -->
@@ -50,9 +60,8 @@
 
     <div ui-view></div> <!-- Where the code from other pages will be injected -->
 
-    <div class='jumbotron centered'><!-- Footer at the bottom of the page -->
-      <div class='container centered'>
-      <footer>
+    <div class="navbar navbar-default transparent">
+      <div class='navbar-inner navbar-collapse collapse' id="footerNav"><!-- Footer nav for normal computers -->
         <ul class='list-inline'>
           <li><p ui-sref='termsOfUse' class='btn btn-link'>Terms of Use</p></li>
           <li><p ui-sref='privacy' class='btn btn-link'>Privacy</p></li>
@@ -60,9 +69,16 @@
           <li><p ui-sref='safetyTips' class='btn btn-link'>Safety Tips</p></li>
         </ul>
         <p>&copy; Helpers Technology, Inc 2014-2015 | All Rights Reserved</p>
-      </footer>
       </div>
-    </div>
+
+      <div class="navbar-header"> <!-- Footer nav for mobile -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#footerNav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+      </div>
 
 
     <script>

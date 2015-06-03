@@ -33,11 +33,10 @@ a:hover {
     /* Navbar */
     .navbar { margin-top: 5% }
 
-    .jumbotron { background: transparent; }
-
-    .navbar.transparent .navbar-inner { background: transparent; }
-
-    .navbar .navbar-inner { background: rgb(0,0,0); } /*Backup color for old browswers */
+    .navbar.transparent { 
+        background: transparent;
+        border: none;
+    }
 
     .nav.nav-center {
         display: inline-block;
@@ -59,6 +58,8 @@ a:hover {
     }
 
     .navbar-inner a { color: black; }
+
+    .navbar-header button { color: black; }
 
     /* Containers, Jumbotrons, and Columns */
     .darkGrey { color: #bcbcbc }
