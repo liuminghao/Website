@@ -1,0 +1,27 @@
+.aboutUs {
+	font-family: AvenirNext-Regular;
+	color: #4A4A4A;
+}
+			
+.aboutUs .title{
+	font-family: AvenirNext-Bold;
+	font-size: 36px;
+	color: #FFFFFF;
+	line-height: 49px;
+}
+
+.aboutUs label{
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.aboutUs .subtitle{
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 27px;
+}
+
+.aboutUs .content {
+	font-size: 18px;
+	line-height: 30px;
+}
