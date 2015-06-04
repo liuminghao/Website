@@ -1,171 +1,29 @@
-<div>
-		<style scoped>
-			.contactUs{
-	width: 1024px;
-	font-family: AvenirNext-Regular;
-	font-size: 18px;
-	margin-left: 170px;
-	color: #333333;
-			}
-			
-			ul{
-				list-style:none;
-				
-				width:100%;
-			}
-			
-			a{
-				text-decoration: none;
-				color: #666666;
-			}
-			
-			#top{
-	background: url(images/ContactUs/AboutUs.png);
-	height: 298px;
-	width: auto;
-			}
-			
-			.topbar{
-				float:left;
-				padding:20px;
-			}
-			
-			.topbar a{
-				padding:15px;
-			}
-			
-			#topbar_ul{
-	padding-top: 60px;
-	width: 100%;
-	padding-left: 140px;
-			}
-						
-			#title{
-	padding-top: 60px;
-	font-family: AvenirNext-Bold;
-	font-size: 36px;
-	color: #FFFFFF;
-	line-height: 49px;
-	font-weight: bolder;
-			}
-			
-			#center{
-	height: 500px;
-			}
-			
-			#left{
-	width: 200px;
-	height: 500px;
-	float: left;
-	margin-top: 60px;
-			}
-			
-			#left_one{
-				
-			}
-			
-			.left_things{
-	margin-top: 5px;
-	font-family: AvenirNext-Bold;
-	font-size: 13px;
-	line-height: 15px;
-	color: #4A4A4A;
-			}
-			
-			#right{
-				
-			}
-			
-			.content{
-	margin-top: 60px;
-	margin-bottom: 60px;
-			}
-			
-			#hr_css{
-	border: 1px solid #979797;
-	margin-top: 50px;
-	width: 900px;
-	margin-left: 100px;
-			}
-			
-			#bottom{
-	font-family: AvenirNext-Regular;
-	font-size: 13.03px;
-	line-height: 18px;
-	color: #4A4A4A;
-	margin-left: 120px;
-			}
-			
-			.bottombar{
-	float: left;
-	margin-left: 100px;
-			}
-			
-			#copyright{
-	font-family: "Times New Roman", Times, serif;
-	font-size: 12px;
-	color: #808080;
-	text-align: center;
-	margin-top: 50px;
-			}
-		.STYLE1 {
-	font-size: 36px;
-	font-weight: bold;
-}
-        .STYLE3 {
-	color: #666666;
-	font-size: 20px;
-}
-        .STYLE4 {font-size: 18px; }
-        .STYLE6 {font-size: 20px; }
-        .STYLE7 {color: #FFFFFF}
-        .STYLE8 {float: left; padding: 20px; color: #FFFFF; }
-        </style>
-</head>
-<div class='contactUs'>
+<link type= "text/css" rel="stylesheet" href="styles/contactUs.css" scoped/>
 
-		<center><div id="top">
-			<div id="title">
-			  <p><img src="images/ContactUs/Contact Us.png" /></p>
-		    </div>
-		</div></center>
-	<div id="center">
-	  <div id="left">
-			<ul>
-				<li id="left_one">
-					<img src="images/ContactUs/Logo1 + Helpers.png" />
-			  </li>
-				<li class="left_things">
-					<img src="images/ContactUs/Checked (Disabled) Copy.png"/>
-			  </li>
-				<li class="left_things">
-					<img src="images/ContactUs/Checked (Disabled) Copy 2.png"/>
-			  </li>
-			</ul>
+<div class='container contactUs'>
+
+	<div class="row centered title">
+		<h1>Contact Us<h1>
+	</div>
+	
+	<div class="row">
+	  	<div class="col-xs-2">
+			<img src="images/ContactUs/Logo1 + Helpers.png" />
+			<div class = "radio">
+				<label><input type = "radio">Press</label>
+			</div>
+			<div class = "radio">
+				<label><input type = "radio">Join Us</label>
+			</div>
 		</div>
 		
-		<div id="right">
-		  <center>
-		    <p>&nbsp;</p>
-		    <p>&nbsp;</p>
-		    <p>&nbsp;</p>
-		    <p><span class="STYLE1">Press</span></p>
-		    <p><a href="mailto:info@helpers.io." class="STYLE6">For press inquiries, please email us at info@helpers.io.</a>	          </p>
-		    <p>&nbsp;</p>
-		    <p>&nbsp; </p>
-		    <p>&nbsp;</p>
-		    <p class="STYLE1"> Join Us </p>
-		    <p class="STYLE4"><span class="STYLE3">If you are interested in joining our team, please email us at</span> <span class="STYLE6"><a href="mailto:info@helpers.io.">info@helpers.io.</a></span></p>
-		    <p>&nbsp;</p>
-		    <p>&nbsp;</p>
-		  </center>
-          
-		  
-		  <center>
-		  </center>
+		<div class="col-xs-9">			
+		    <h2 class="subtitle centered">Press</h2>
+		    <p class="content centered">For press inquiries, please email us at <a href="mailto:info@helpers.io." class="STYLE6">info@helpers.io</a>.</p>
+		    <br>
+		    <br>
+		    <h2 class="subtitle centered">Join Us</h2>
+		    <p class="content centered">If you are interested in joining our team, please email us at <a href="mailto:info@helpers.io.">info@helpers.io</a>.</p>
 		</div>
 	</div>
-	<hr id="hr_css" />
-
-</div>
 </div>
