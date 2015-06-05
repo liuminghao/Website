@@ -1,20 +1,9 @@
-<div class="everyone col-xs-10">
-  			<!--Text part for everyone-->
-  					<h3 class = "centered"> For Everyone </h3>
-						<ol>
-							<li><dt><b>What Can I do with a <i>Helpers</i> account?</b></dt></li>
-							<dd><p>You are eligible to find a tutor with a </i>Helpers</i> account, and will be able to tutor once you have edit your "Tutor Account Information" under "Me".</p></dd>
-							
-							<li><dt><b>What if one of the user's phone ran out of power during a session?</b></dt></li>
-							<dd><p>The session will be automatically charged according to the duration the users have agreed upon. However, having a phone charge to have our app running duing the session is part of being prepared for the session, which could affect users' own rating.</p></dd>
-
-							<li><dt><b>How does the rating system work?</b></dt></li>
-							<dd><p>Users will have two different ratings, one as students, and another one as tutors. User's rating will be shown according to the repsective role in a session.</p></dd>
-
-							<li><dt><b>What if I cancel an appointment?</b></dt></li>
-							<dd><p>You can</p></dd>
-
-							<li><dt><b>How are payments done? Do I need to bring cash?</b></dt></li>
-							<dd><p> All payment is done through our app with the card information provided by both users. There sill be no need for cash transaction.</p></dd>
-						</ol>
+<div class="everyone col-xs-9">
+	<h3 class="centered"> For Everyone </h3>
+	<ol>
+		<div ng-repeat="q in qEveryone">
+			<li><dt><b>{{q.question}}</b></dt></li>
+			<dd><p>{{q.answer}}</p></dd>
+		<div>
+	</ol>
 </div>

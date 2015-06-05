@@ -1,6 +1,6 @@
 <!-- faq.html -->
 <link type= "text/css" rel="stylesheet" href="styles/faq.css" scoped/>
-<div class="container">
+<div class="container" ng-controller='faqCtrl'>
 		<!--Page title-->
 	<div class="row centered topbar">
 		<h1>FAQ</h1>
@@ -8,12 +8,18 @@
 
   <div class = "row">
   	<!-- Side Navigation Bar-->
-  	<div class="col-xs-2">
+  	<div class="col-xs-3">
   		<img src="images/Logo1 + Helpers.png" style="float:left"/> 
   		<p>FAQ</p>
       <div class = "radio">
         <label><input type = "radio" ng-checked = "checkPage('everyone')" ui-sref="faq.everyone">For Everyone</label>
       </div>
+      <div ng-show="checkPage('everyone')">
+        <div class='radio' ng-repeat='q in qEveryone'>
+          <label><input type='radio' ng-checked='false' id='everyone{{$index}}' ng-click='scrollTo("everyone", {{$index}})'>{{q.question}}</label>
+        </div>
+      </div>
+
       <div class = "radio">
         <label><input type = "radio" ng-checked = "checkPage('tutor')"ui-sref="faq.tutor">For Tutors</label>
       </div>
