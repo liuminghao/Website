@@ -31,35 +31,33 @@ a:hover {
 
 /* Classes */
     /* Navbar */
-    .navbar { margin-top: 5% }
+    .navbar { 
+        margin-top: 3%;
+        font-size: 25px;
+    }
 
     .navbar.transparent { 
         background: transparent;
         border: none;
     }
 
-    .nav.nav-center {
-        display: inline-block;
-        left: 0;
-        right: 0;
-        margin: 0;
-        float: none;
-    }
-
-    .navbar-inner { text-align: center; }
-
-    .navbar-inner li { 
-        display: inline-block; 
-        font-size: 23px;
-    }
-
-    .navbar-inner li:hover {
+    .navbar li:hover {
         text-decoration: underline;        
     }
 
-    .navbar-inner a { color: black; }
+    .navbar a { color: black; }
 
-    .navbar-header button { color: black; }
+    .navbar-right a { color: black; }
+
+    .navbar button { 
+        color: black;
+        margin-left: 20px;/*Not responsive currently, fix this! */
+    }
+
+    .nav-justified {
+        width: 50%;
+        margin: 0 auto;
+    }
 
     /* Containers, Jumbotrons, and Columns */
     .darkGrey { color: #bcbcbc }

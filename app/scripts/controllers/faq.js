@@ -66,6 +66,4 @@ app.controller('faqCtrl', function($scope, $location, $anchorScroll) {
 		}
 	];
 
-	$scope.false = 'false';
-
 });

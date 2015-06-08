@@ -12,34 +12,46 @@ app.config( function($stateProvider, $urlRouterProvider) {
 			templateUrl: '../views/home.html'
 		})
 		.state('aboutUs', {
+			abstract: true,
 			url: '/aboutUs',
-			templateUrl: '../views/aboutUs.html',
-			data: {
-				css: '../styles/test.css'
-			}
+			templateUrl: '../views/aboutUs/aboutUs.html'
 		})
+				.state('aboutUs.ourStory', {
+					url: '/ourStory',
+					templateUrl: '../views/aboutUs/ourStory.html'
+				})
+				.state('aboutUs.ourVision', {
+					url: '/ourVision',
+					templateUrl: '../views/aboutUs/ourVision.html'
+				})
 		.state('contactUs', {
+			abstract: true,
 			url: '/contactUs',
-			templateUrl: '../views/contactUs.html'
+			templateUrl: '../views/contactUs/contactUs.html'
 		})
+				.state('contactUs.press', {
+					url: '/press',
+					templateUrl: '../views/contactUs/press.html'
+				})
+				.state('contactUs.joinUs', {
+					url: '/joinUs',
+					templateUrl: '../views/contactUs/joinUs.html'
+				})
 		.state('faq', {
 			abstract: true,
 			url: '/faq',
-			templateUrl: '../views/faq.html',
-			data: {
-				css: '../styles/faq.css'
-			}
+			templateUrl: '../views/faq/faq.html'
 		})
 				.state('faq.everyone', {
-					url: '/everyone' ,
+					url: '/everyone',
 					templateUrl: '../views/faq/everyone.html'
 				})
 				.state('faq.tutor', {
-					url: '/tutor' ,
+					url: '/tutor',
 					templateUrl: '../views/faq/tutor.html'
 				})
 				.state('faq.student', {
-					url: '/student' ,
+					url: '/student',
 					templateUrl: '../views/faq/student.html'
 				})
 		.state('preSignup', {
@@ -74,7 +86,7 @@ app.config( function($stateProvider, $urlRouterProvider) {
 		.state('account', {
 			abstract: true,
 			url: '/account',
-			templateUrl: '../views/account.html'
+			templateUrl: '../views/account/account.html'
 		})
 				.state('account.genInfo', {
 					url: '/genInfo',

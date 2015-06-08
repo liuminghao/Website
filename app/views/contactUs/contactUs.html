@@ -1,0 +1,24 @@
+<link type= "text/css" rel="stylesheet" href="styles/contactUs.css" scoped/>
+
+<div class='container contactUs'>
+
+	<div class="row centered title">
+		<h1>Contact Us<h1>
+	</div>
+	
+	<div class="row">
+	  <div class="col-xs-2" ng-controller='viewCtrl'>
+			<img src="images/ContactUs/Logo1 + Helpers.png" />
+			<div class="radio">
+				<label><input ui-sref='contactUs.press' ng-checked='checkPage("press")' type="radio">Press</label>
+			</div>
+			<div class="radio">
+				<label><input ui-sref='contactUs.joinUs' ng-checked='checkPage("joinUs")' type="radio">Join Us</label>
+			</div>
+		</div>
+		
+		<div class="col-xs-9">
+			<div ui-view></div>
+		</div>
+	</div>
+</div>
