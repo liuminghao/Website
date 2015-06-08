@@ -12,7 +12,7 @@ app.controller('faqCtrl', function($scope, $location, $anchorScroll) {
 	$scope.qEveryone = [
 		{
 			question: 'What can I do with a Helpers account?',
-			answer: 'You are eligible to find a tutor with a Helpers account, and will be able to tutor once you have edit your "Tutor Account Information" under "Me".'
+			answer: 'You are eligible to find a tutor with a Helpers account, and will be able to tuto  once you have edit your "Tutor Account Information" under "Me".'
 		},
 		{
 			question: 'What if one of the user\'s phone ran out of power during a session?',
