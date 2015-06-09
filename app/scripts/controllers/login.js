@@ -5,6 +5,8 @@ var app = angular.module('HelpersApp');
 	app.controller('loginCtrl', function($scope, $state, loginService, range, updateInfo, getInfo, user) {
 		$scope.loginAttempt = function(loginDetails) {
 			var result = loginService.login(loginDetails);//Call loginService API
+			loginDetails.username_or_email = '';
+			loginDetails.password = '';
 			if (result) {
 				$scope.signedIn = true;
 				$state.go('account.genInfo');

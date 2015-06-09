@@ -35,7 +35,7 @@ h3{
 	margin:5%;
 }
 
-.st_text p{
+.ai_text p{
 	font-family: AvenirNext-Regular;
 	font-size:18px;
 	color:#000000;
@@ -74,5 +74,3 @@ footer {
 	color: #808080;
 	line-height: 16px;
 }
-
-#red { color: red;}

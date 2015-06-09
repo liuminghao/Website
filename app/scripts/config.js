@@ -4,6 +4,7 @@ var app = angular.module('HelpersApp');
 
 app.config( function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/home');
+	//$locationProvider.html5Mode(true);
 
 	$stateProvider
 
@@ -14,45 +15,55 @@ app.config( function($stateProvider, $urlRouterProvider) {
 		.state('aboutUs', {
 			abstract: true,
 			url: '/aboutUs',
-			templateUrl: '../views/aboutUs/aboutUs.html'
+			templateUrl: '../views/aboutUs/aboutUs.html',
+			css: '../styles/aboutUs.css'
 		})
 				.state('aboutUs.ourStory', {
 					url: '/ourStory',
-					templateUrl: '../views/aboutUs/ourStory.html'
+					templateUrl: '../views/aboutUs/ourStory.html',
+					css: '../styles/aboutUs.css'
 				})
 				.state('aboutUs.ourVision', {
 					url: '/ourVision',
-					templateUrl: '../views/aboutUs/ourVision.html'
+					templateUrl: '../views/aboutUs/ourVision.html',
+					css: '../styles/aboutUs.css'
 				})
 		.state('contactUs', {
 			abstract: true,
 			url: '/contactUs',
-			templateUrl: '../views/contactUs/contactUs.html'
+			templateUrl: '../views/contactUs/contactUs.html',
+			css: '../styles/contactUs.css'
 		})
 				.state('contactUs.press', {
 					url: '/press',
-					templateUrl: '../views/contactUs/press.html'
+					templateUrl: '../views/contactUs/press.html',
+					css: '../styles/contactUs.css'
 				})
 				.state('contactUs.joinUs', {
 					url: '/joinUs',
-					templateUrl: '../views/contactUs/joinUs.html'
+					templateUrl: '../views/contactUs/joinUs.html',
+					css: '../styles/contactUs.css'
 				})
 		.state('faq', {
 			abstract: true,
 			url: '/faq',
-			templateUrl: '../views/faq/faq.html'
+			templateUrl: '../views/faq/faq.html',
+			css: '../styles/faq.css'
 		})
 				.state('faq.everyone', {
 					url: '/everyone',
-					templateUrl: '../views/faq/everyone.html'
+					templateUrl: '../views/faq/everyone.html',
+					css: '../styles/faq.css'
 				})
 				.state('faq.tutor', {
 					url: '/tutor',
-					templateUrl: '../views/faq/tutor.html'
+					templateUrl: '../views/faq/tutor.html',
+					css: '../styles/faq.css'
 				})
 				.state('faq.student', {
 					url: '/student',
-					templateUrl: '../views/faq/student.html'
+					templateUrl: '../views/faq/student.html',
+					css: '../styles/faq.css'
 				})
 		.state('preSignup', {
 			url: '/preSignup',
@@ -69,19 +80,23 @@ app.config( function($stateProvider, $urlRouterProvider) {
 		})
 				.state('safetyTips', {
 					url: '/safetyTips',
-					templateUrl: '../views/footers/safetyTips.html'
+					templateUrl: '../views/footers/safetyTips.html',
+					css: '../styles/footers.css'
 				})
 				.state('academicIntegrity', {
 					url: '/academicIntegrity',
-					templateUrl: '../views/footers/academicIntegrity.html'
+					templateUrl: '../views/footers/academicIntegrity.html',
+					css: '../styles/footers.css'
 				})
 				.state('termsOfUse', {
 					url: '/termsOfUse',
-					templateUrl: '../views/footers/termsOfUse.html'
+					templateUrl: '../views/footers/termsOfUse.html',
+					css: '../styles/footers.css'
 				})
 				.state('privacy', {
 					url: '/privacy',
-					templateUrl: '../views/footers/privacy.html'
+					templateUrl: '../views/footers/privacy.html',
+					css: '../styles/footers.css'
 				})
 		.state('account', {
 			abstract: true,

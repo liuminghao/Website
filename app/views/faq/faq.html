@@ -1,9 +1,11 @@
 <!-- faq.html -->
-<link type= "text/css" rel="stylesheet" href="styles/faq.css" scoped/>
 <div class="container faq">
-		<!--Page title-->
+	<!--Page title-->
 	<div class="row centered topbar">
-		<h1>FAQ</h1>
+		<div class='col-xs-3'></div>
+		<div class='col-xs-9'>
+			<h1>FAQ</h1>
+		</div>
 	</div>
 
 	<div class="row" ng-controller='faqCtrl'>
@@ -16,32 +18,48 @@
 				<div class="radio nav_title">
 					<label><input type="radio" ng-checked="checkPage('everyone')" ui-sref="faq.everyone">For Everyone</label>
 				</div>
-				<div class="form-group" ng-show="checkPage('everyone')">
-					<div class='radio' ng-repeat='q in qEveryone'>
-						<label><input type='radio' id='everyone{{$index}}' name='everyoneQuestions' ng-click='scrollTo("everyone", {{$index}})'>{{q.question}}</label>
+				<div class='row'>
+					<div class='col-xs-2'></div>
+					<div class='col-xs-10'>
+						<div class="form-group" ng-show="checkPage('everyone')">
+							<div class='radio' ng-repeat='q in qEveryone'>
+								<label><input type='radio' id='everyone{{$index}}' name='everyoneQuestions' ng-click='scrollTo("everyone", {{$index}})'>{{q.question}}</label>
+							</div>
+						</div>
 					</div>
-				</div>
+				</div><!-- /everyone nav-->
+
 
 				<div class="radio nav_title">
 					<label><input type="radio" ng-checked="checkPage('tutor')"ui-sref="faq.tutor">For Tutors</label>
 				</div>
-				<div class="form-group" ng-show="checkPage('tutor')">
-					<div class='radio' ng-repeat='q in qTutor'>
-						<label><input type='radio' id='tutor{{$index}}' name='tutorQuestions' ng-click='scrollTo("tutor", {{$index}})'>{{q.question}}</label>
+				<div class='row'>
+					<div class='col-xs-2'></div>
+					<div class='col-xs-10'>
+						<div class="form-group" ng-show="checkPage('tutor')">
+							<div class='radio' ng-repeat='q in qTutor'>
+								<label><input type='radio' id='tutor{{$index}}' name='tutorQuestions' ng-click='scrollTo("tutor", {{$index}})'>{{q.question}}</label>
+							</div>
+						</div>
 					</div>
-				</div>
+				</div><!-- /tutor nav -->
+
 
 				<div class="radio nav_title">
 					<label><input type="radio" ng-checked="checkPage('student')"ui-sref="faq.student">For Students</label>
 				</div>
-				<div class="form-group" ng-show="checkPage('student')">
-					<div class='radio' ng-repeat='q in qStudent'>
-						<label><input type='radio' id='student{{$index}}' name='studentQuestions' ng-click='scrollTo("student", {{$index}})'>{{q.question}}</label>
+				<div class='row'>
+					<div class='col-xs-2'></div>
+					<div class='col-xs-10'>				
+						<div class="form-group" ng-show="checkPage('student')">
+							<div class='radio' ng-repeat='q in qStudent'>
+								<label><input type='radio' id='student{{$index}}' name='studentQuestions' ng-click='scrollTo("student", {{$index}})'>{{q.question}}</label>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			
-		</div>
+			</div><!-- /students nav -->
+		</div><!-- /side-nav-->
     
 		<div ui-view></div>
 	</div>

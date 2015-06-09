@@ -16,6 +16,6 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngStorage',
-    'uiRouterStyles',
-    'ui.router'
+    'ui.router',
+    'door3.css'
   ]);
