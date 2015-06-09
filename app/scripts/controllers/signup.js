@@ -14,32 +14,32 @@ app.controller('signupCtrl', function($scope, range, registerUser, after, match)
 		else {
 			alert('no');
 		}
-	}
+	};
 
 	$scope.checkValid = function(isValid) {
 		return $scope.checkPass() && $scope.checkEmail() && $scope.bcEmail() && isValid;
-	} 
+	};
 
 	$scope.checkPass = function() {
 		$scope.passValidate = match($scope.confirmPassword, $scope.newUser.password);
 		return $scope.passValidate;
-	}
+	};
 
 	$scope.checkEmail = function() {
 		$scope.emailValidate = match($scope.confirmEmail, $scope.newUser.email);
 		return $scope.emailValidate;
-	}
+	};
 
 	$scope.bcEmail = function() {
 		$scope.bcValidate = eval(after('@', $scope.newUser.email) === 'bc.edu');
 		return $scope.bcValidate;
-	}
+	};
 
 	$scope.register = function(newUser, isValid) {
 		if ($scope.checkValid(isValid)) {
 			registerUser.register($scope, newUser);
 		}
-	}
+	};
 
 	$scope.range = range;
 });
@@ -56,7 +56,7 @@ app.factory('registerUser', function($http) {
 
 			$promise.success(function(result) {
 				alert("Congratulations on signing up!");
-			})
+			});
 		}
 	}
 });
