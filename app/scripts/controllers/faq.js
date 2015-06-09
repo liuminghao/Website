@@ -66,4 +66,46 @@ app.controller('faqCtrl', function($scope, $location, $anchorScroll) {
 		}
 	];
 
+	$scope.qTutor = [
+		{
+			question: 'How do I become a tutor with Helpers?',
+			answer: 'After signing up for an account with Helpers you can go to "Me" and go to "Tutor Account Information." You may add courses that you would like to tutor. After that, you are eligible to teach!'
+		},
+		{
+			question: 'Can I only be a tutor but not a student?',
+			answer: 'We designed our app to allow users to be both students and tutors. You can just ignore the features for students if you only wish to teach.'
+		},
+		{
+			question: 'Do I have to be certified in order to teach?',
+			answer: 'No, you can start teaching once you have added the course.'
+		},
+		{
+			question: 'What if I cancel an appointment?',
+			answer: ' '
+		},
+		{
+			question: 'How are payments done? Do I need to bring cash?',
+			answer: 'All payment is done through our app with the card information provided by both users. There sill be no need for cash transaction.'
+		}
+	];
+
+	$scope.qStudent = [
+		{
+			question: 'How do I become a student with Helpers?',
+			answer: 'Simply sign up an account with Helpers and you will be able to find tutors for help.'
+		},
+		{
+			question: 'How do I ensure the quality of the tutor?',
+			answer: 'You can always check if the tutor is certified. There is always a certified symbol if they have subimitted credentials to tutor. You can also check their ratings, which reflect comments from previous students. If you are still unsure, you can message the tutor before sending out a request.'
+		},
+		{
+			question: 'Why do I have a rating?',
+			answer: 'Your rating is based upon the tutors opinion on you, which reflects how prepared you were for this session and if you'
+		},
+		{
+			question: 'How can I find a tutor I like that I have previously met?',
+			answer: 'We currently do not allow this feature, but if you cannot find this tutor when you are searching for a subject, chances are, that tutor is not around at the time and location that you have specified and you should seek for other qualified tutors to help you out.'
+		}
+	];
+
 });

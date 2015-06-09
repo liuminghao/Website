@@ -1,113 +1,44 @@
-/*Top navigation bar*/
-.topbar{
+.faq {
 	font-family: AvenirNext-Regular;
-	font-size: 20px;
-	color: #FFFFFF;
-	line-height: 27px;
-	background-repeat: no-repeat;
-	background-image:url(../images/1.png);
-	height:50%;
+	color: #000000;
 }
 
-.topbar p{
-	font-family: AvenirNext-Bold;
-	font-size:48px;
-	color:#FFFFFF;
-	line-height:49px;
-}
-
-span{
-	color:#000000;
-	border-width: 2px;
-	border-radius:8px;
-	border-style: solid;
-	border-color: #FFFFFF;
-	background:#FFFFFF;
-}
-
-
-.page_title{
+.topbar {
 	font-family: AvenirNext-Bold;
 	font-size: 36px;
 	color: #FFFFFF;
 	line-height: 49px;
 }
 
-/*everyone*/
-.everyone_side_header{
-	font-family: AvenirNext-Demibold;
-	margin-left:10%;
-	color:#4A4A4A;
-}
-
-.eveyone .row{
-	font-family:AvenirNext-DemiBold;
-	font-size:18px;
-	color:#000000;
+.logo {
+	font-size: 18px;
 	line-height: 25px;
 }
 
-.everyone_text h3{
-	font-family:AvenirNext-Regular;
-}
-
-.everyone_text ol{
-	font-family: AvenirNext-Regular;
-}
-
-/*tutors*/
-.tutors_side_header{
-	font-family: AvenirNext-Demibold;
-	margin-left:10%;
-	margin-top:15%;
-	margin-bottom:5%;
-}
-
-.tutors_text h3{
-	font-family:AvenirNext-Regular;
-	margin-right:30%;
-	margin-left:5%;
-	margin-top:10%;
-	margin-bottom:5%;
-}
-
-.tutors_text ol{
-	font-family: AvenirNext-Regular;
-	margin-right: 30%;
-	margin-left:-30%;
-	margin-top:-1%;
-}
-
-/*students*/
-.students_side_header{
-	font-family: AvenirNext-Demibold;
-	margin-left:10%;
-	margin-top:15%;
-	margin-bottom:5%;
-}
-
-.students_text h3{
-	font-family:AvenirNext-Regular; 
-}
-
-.students_text ol{
-	font-family: AvenirNext-Regular;
-}
-
-/*bottom section*/
-.botnav{
-	font-family:AvenirNext-Regular;
-	font-size:13.03px;
-	margin-bottom: 5%; 
-	color: #4A4A4A;
-	text-align: center;
-}
-
-
-footer {
-	text-align: center;
-	font-family: Times-Roman;
+.nav_title {
 	font-size: 12px;
-	color: #808080;
 	line-height: 16px;
+	color: #4A4A4A;
+}
+
+.nav_content {
+	font-family: AvenirNext-DemiBold;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.content {
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.content h3 {
+	font-family: AvenirNext-Medium;
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.support {
+	font-size: 18px;
+	line-height: 25px;
 }
