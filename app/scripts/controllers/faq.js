@@ -31,38 +31,6 @@ app.controller('faqCtrl', function($scope, $location, $anchorScroll) {
 		{
 			question: 'How are payments done? Do I need to bring cash?',
 			answer: 'All payment is done through our app with the card information provided by both users. There sill be no need for cash transaction.'
-		},
-		{
-			question: 'testing for scrollTo',
-			answer: 'blah'
-		},
-		{
-			question: 'testing for scrollTo',
-			answer: 'blah'
-		},
-		{
-			question: 'testing for scrollTo',
-			answer: 'blah'
-		},
-		{
-			question: 'testing for scrollTo',
-			answer: 'blah'
-		},
-		{
-			question: 'testing for scrollTo',
-			answer: 'blah'
-		},
-		{
-			question: 'testing for scrollTo',
-			answer: 'blah'
-		},
-		{
-			question: 'testing for scrollTo',
-			answer: 'blah'
-		},
-		{
-			question: 'testing for scrollTo',
-			answer: 'blah'
 		}
 	];
 

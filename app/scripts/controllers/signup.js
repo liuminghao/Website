@@ -9,10 +9,10 @@ app.controller('signupCtrl', function($scope, range, registerUser, after, match)
 
 	$scope.signupSubmit = function(isValid) {									/* test function */
 		if ($scope.checkValid(isValid)) {
-			alert('hi');
+			console.log('hi');
 		}
 		else {
-			alert('no');
+			console.log('no');
 		}
 	};
 
@@ -30,8 +30,8 @@ app.controller('signupCtrl', function($scope, range, registerUser, after, match)
 		return $scope.emailValidate;
 	};
 
-	$scope.bcEmail = function() {
-		$scope.bcValidate = eval(after('@', $scope.newUser.email) === 'bc.edu');
+	$scope.bcEmail = function() {//Consider finding an alternative to eval
+		$scope.bcValidate = eval(after('@', $scope.newUser.email) === 'bc.edu');// jshint ignore:line
 		return $scope.bcValidate;
 	};
 
@@ -48,15 +48,16 @@ app.factory('registerUser', function($http) {
 	return {
 		register: function($scope, userInfo) {
 			var $promise = $http({
-				method: "POST",
-				url: "http://54.172.140.235/api/v1/createuser/",
-				headers: {'Content-Type': "application/json"},
+				method: 'POST',
+				url: 'http://54.172.140.235/api/v1/createuser/',
+				headers: {'Content-Type': 'application/json'},
 				data: JSON.stringify(userInfo)
 			});
 
 			$promise.success(function(result) {
-				alert("Congratulations on signing up!");
+				console.log('Congratulations on signing up!');
+				console.log(result);
 			});
 		}
-	}
+	};
 });
