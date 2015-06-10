@@ -1,4 +1,4 @@
-<script>
+﻿<script>
     angular.module('myApp', ['duScroll'])
             .controller('MyCtrl', function($scope, $document){
                 $scope.toTheTop = function() {
@@ -14,6 +14,8 @@
     ).value('duScrollOffset', 30);
 </script>
 
+<link type="text/css" rel = "stylesheet" href = "../styles/home.css" />
+
 <div ng-app="myApp" ng-init="currentPage = 1">
 <div class="wrap" ng-controller="MyCtrl">
     <div id="root">
@@ -22,7 +24,7 @@
                 <div id="page-1" name="page1">
                     <!--Home-->
                     <div id="helpers-icon">
-                        <img src="images/Home/Helpers%20Long%20Logo.png" />
+                        <img src="../images/Home/Helpers%20Long%20Logo.png" />
                     </div>
                     <div id="subtitle">
                         <h4>An efficient platform for you to connect<br>
@@ -41,7 +43,7 @@
                         <!--Whatever-->
                         <div class="page-title">
                             <div class="page-icon"></div>
-                            <h1><img src="images/Home/notebook_F.png" />  Whatever</h1>
+                            <h1><img src="../images/Home/notebook_F.png" />  Whatever</h1>
                         </div>
                         <div class="text-box">
                             <div class="page-left">
@@ -50,7 +52,7 @@
                                     subjects, from music theory to string<br>
                                     theory, you name it.</p>
                             </div>
-                            <div class="page-iphone"><img src="images/Home/iPhone_5s.png" /></div>
+                            <div class="page-iphone"><img src="../images/Home/iPhone_5s.png" /></div>
                             <div class="page-right">
                                 <h5>For Tutors...</h5>
                                 <p> Teach classes you have taken. Follow<br>
@@ -66,7 +68,7 @@
                         <!--Whenever-->
                         <div class="page-title">
                             <div class="page-icon"></div>
-                            <h1><img src="images/Home/clock_F.png" />  Whenever</h1>
+                            <h1><img src="../images/Home/clock_F.png" />  Whenever</h1>
                         </div>
                         <div class="text-box">
                             <div class="page-left">
@@ -76,7 +78,7 @@
                                     appointments. Learn whenever you<br>
                                     want.</p>
                             </div>
-                            <div class="page-iphone"><img src="images/Home/iPhone_5s.png" /></div>
+                            <div class="page-iphone"><img src="../images/Home/iPhone_5s.png" /></div>
                             <div class="page-right">
                                 <h5>For Tutors...</h5>
                                 <p> You can input your weekly schedule<br>
@@ -92,7 +94,7 @@
                         <!--Whoever-->
                         <div class="page-title">
                             <div class="page-icon"></div>
-                            <h1><img src="images/Home/ID_card_F.png" />  Whoever</h1>
+                            <h1><img src="../images/Home/ID_card_F.png" />  Whoever</h1>
                         </div>
                         <div class="text-box">
                             <div class="page-left">
@@ -101,7 +103,7 @@
                                     study with, let it be your classmate or<br>
                                     your TA.</p>
                             </div>
-                            <div class="page-iphone"><img src="images/Home/iPhone_5s.png" /></div>
+                            <div class="page-iphone"><img src="../images/Home/iPhone_5s.png" /></div>
                             <div class="page-right">
                                 <h5>For Tutors...</h5>
                                 <p> Meet your fellow classmates and help<br>
@@ -118,7 +120,7 @@
                         <!--Wherever-->
                         <div class="page-title">
                             <div class="page-icon"></div>
-                            <h1><img src="images/Home/location_F.png" />  Wherever</h1>
+                            <h1><img src="../images/Home/location_F.png" />  Wherever</h1>
                         </div>
                         <div class="text-box">
                             <div class="page-left">
@@ -127,7 +129,7 @@
                                     favorite meeting location. Learn<br>
                                     wherever you want.</p>
                             </div>
-                            <div class="page-iphone"><img src="images/Home/iPhone_5s.png" /></div>
+                            <div class="page-iphone"><img src="../images/Home/iPhone_5s.png" /></div>
                             <div class="page-right">
                                 <h5>For Tutors...</h5>
                                 <p> Hold a quick session at wherever you<br>
@@ -143,7 +145,7 @@
                         <!--$$$ever-->
                         <div class="page-title">
                             <div class="page-icon"></div>
-                            <h1><img src="images/Home/dollar_F.png" />  $$$ever</h1>
+                            <h1><img src="../images/Home/dollar_F.png" />  $$$ever</h1>
                         </div>
                         <div class="text-box">
                             <div class="page-left">
@@ -152,7 +154,7 @@
                                     at whatever price. You pay what you<br>
                                     want.</p>
                             </div>
-                            <div class="page-iphone"><img src="images/Home/iPhone_5s.png" /></div>
+                            <div class="page-iphone"><img src="../images/Home/iPhone_5s.png" /></div>
                             <div class="page-right">
                                 <h5>For Tutors...</h5>
                                 <p> You set your own prices for each class<br>
@@ -187,37 +189,37 @@
 
     <nav id="navleft" ng-hide="currentPage === 1">
         <div id="navleft-title">
-            <img src="images/Home/smallLogo.png" id="navleft-image" />
+            <img src="../images/Home/smallLogo.png" id="navleft-image" />
             <em>Helpers</em>
         </div>
         <div style="clear:both"></div>
         <ul id="navleft-ul">
             <li id="navleft-2">
-                <img src="images/Home/radio.png" ng-hide="currentPage===2"/>
-                <img src="images/Home/radio_active.png" ng-show="currentPage===2"/>
+                <img src="../images/Home/radio.png" ng-hide="currentPage===2"/>
+                <img src="../images/Home/radio_active.png" ng-show="currentPage===2"/>
                 <a href="#page2" du-smooth-scroll du-scrollspy ng-click="currentPage = 2;">Whatever</a></li>
             <li id="navleft-3">
-                <img src="images/Home/radio.png" ng-hide="currentPage===3"/>
-                <img src="images/Home/radio_active.png" ng-show="currentPage===3"/>
+                <img src="../images/Home/radio.png" ng-hide="currentPage===3"/>
+                <img src="../images/Home/radio_active.png" ng-show="currentPage===3"/>
                 <a href="#page3" du-smooth-scroll du-scrollspy ng-click="currentPage = 3;">Whenever</a></li>
             <li id="navleft-4">
-                <img src="images/Home/radio.png" ng-hide="currentPage===4"/>
-                <img src="images/Home/radio_active.png" ng-show="currentPage===4"/>
+                <img src="../images/Home/radio.png" ng-hide="currentPage===4"/>
+                <img src="../images/Home/radio_active.png" ng-show="currentPage===4"/>
                 <a href="#page4" du-smooth-scroll du-scrollspy ng-click="currentPage = 4;">Whoever</a></li>
             <li id="navleft-5">
-                <img src="images/Home/radio.png" ng-hide="currentPage===5"/>
-                <img src="images/Home/radio_active.png" ng-show="currentPage===5"/>
+                <img src="../images/Home/radio.png" ng-hide="currentPage===5"/>
+                <img src="../images/Home/radio_active.png" ng-show="currentPage===5"/>
                 <a href="#page5" du-smooth-scroll du-scrollspy ng-click="currentPage = 5;">Wherever</a></li>
             <li id="navleft-6">
-                <img src="images/Home/radio.png" ng-hide="currentPage===6"/>
-                <img src="images/Home/radio_active.png" ng-show="currentPage===6"/>
+                <img src="../images/Home/radio.png" ng-hide="currentPage===6"/>
+                <img src="../images/Home/radio_active.png" ng-show="currentPage===6"/>
                 <a href="#page6" du-smooth-scroll du-scrollspy ng-click="currentPage = 6;">$$$ever</a></li>
         </ul>
     </nav>
 
     <!--
     <div id="iphone-im" ng-hide="currentPage === 1">
-        <img src="images/Home/iPhone_5s.png" />
+        <img src="../images/Home/iPhone_5s.png" />
     </div>
     -->
 
@@ -225,7 +227,7 @@
         <a href="#page2" du-smooth-scroll du-scrollspy class="next-page" style="text-align: center" ng-click="currentPage=2;">
             <div class="scroll-tip-bg">
                 <div id="down-arrow-1-im">
-                    <img src="images/Home/arrow.png"/>
+                    <img src="../images/Home/arrow.png"/>
                 </div>
             </div>
         </a>
@@ -235,7 +237,7 @@
         <a href={{"#page"+(currentPage)}} du-smooth-scroll du-scrollspy class="next-page" style="text-align: center" ng-click="currentPage = (currentPage + 1 > 6) ? 6 : (currentPage + 1)">
             <div class="scroll-tip-bg">
                 <div class="arrow-im">
-                    <img src="images/Home/arrow.png"/>
+                    <img src="../images/Home/arrow.png"/>
                 </div>
             </div>
         </a>
@@ -245,7 +247,7 @@
         <a href={{"#page"+(currentPage)}} du-smooth-scroll du-scrollspy class="next-page" style="text-align: center" ng-click="currentPage = (currentPage - 1 < 1) ? 1 : (currentPage - 1)">
             <div class="scroll-tip-bg">
                 <div class="arrow-im">
-                    <img src="images/Home/arrow_up.png"/>
+                    <img src="../images/Home/arrow_up.png"/>
                 </div>
             </div>
         </a>
