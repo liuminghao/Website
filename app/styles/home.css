@@ -1,32 +1,3 @@
-html { overflow: hidden; }
-
-#navbar{
-    width: 100%;
-    position: fixed;
-    margin-top: 8%;
-    margin-left: 25%;
-    margin-right: 25%;
-}
-
-#navbar-left-ul li{
-    margin-left: 10px;
-    font-family: Avenir%20Next%20Regular;
-    font-size: 20px;
-    line-height: 28px;
-    float: left;
-    list-style: none;
-}
-
-#navbar-left-ul li a{
-    margin: 5px 10px;
-    color: #4A4A4A;
-
-}
-
-#navbar-right{
-    margin-left: 7%;
-}
-
 .btn {
     margin-left: 20px;
     background: #FFFFFF;
@@ -35,11 +6,6 @@ html { overflow: hidden; }
 }
 
 #page-1 {
-    /*background-image:url(../images/Home/home_bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;*/
-    /*margin-top: -30px;*/
     text-align: center;
 }
 
@@ -53,7 +19,6 @@ html { overflow: hidden; }
     font-size: 25px;
     color: #FFFFFF;
     line-height: 34px;
-
 }
 
 #page-1-buttons{
@@ -83,7 +48,7 @@ html { overflow: hidden; }
     /* padding: 10px 10px 10px 10px; */
     height: 100%;
     overflow-y: auto;
-    _position:absolute;
+    position:absolute;
     z-index: 2;
 }
 
@@ -136,42 +101,6 @@ html { overflow: hidden; }
     text-align: center;
 }
 
-#page-2 {
-    /*opacity: 0.4;*/
-    background: #30EB58;
-    background-color: rgba(48,235,88,0.4);
-    border: 1px solid #979797;
-}
-
-#page-3 {
-    /*opacity: 0.4;*/
-    background: #30EBBF;
-    background-color: rgba(48,235,191,0.4);
-    border: 1px solid #979797;
-}
-
-#page-4 {
-    /*opacity: 0.4;*/
-    background: #18DCE4;
-    background-color: rgba(24,330,228,0.4);
-    border: 1px solid #979797;
-}
-
-#page-5 {
-    /*opacity: 0.4;*/
-    background: #3096EB;
-    background-color: rgba(48,150,235,0.4);
-    border: 1px solid #979797;
-}
-
-#page-6 {
-    /*opacity: 0.4;*/
-    background: #3458F3;
-    background-color: rgba(52,88,243,0.4);
-    border: 1px solid #979797;
-    margin-bottom: 600px;
-}
-
 #page-other h1 {
     font-family: Avenir%20Next%20Bold;
     font-size: 30px;
@@ -211,38 +140,6 @@ html { overflow: hidden; }
 .page-right {
     padding-top: 5%;
     float:left;
-}
-
-#footer {
-    text-align: center;
-}
-
-#footer-nav {
-    margin-left: 30%;
-    margin-right: auto;
-}
-
-#footer-nav-ul {
-    float: none;
-}
-
-#footer-nav-ul li{
-    margin-left: 5%;
-    font-family: Avenir%20Next%20Regular;
-    font-size: 12px;
-    line-height: 28px;
-    float: left;
-    list-style: none;
-}
-
-#footer-nav-ul li a {
-    color: #4A4A4A;
-    text-align: center;
-}
-
-#footer-info {
-    margin-top:20px;
-    font-size: 12px;
 }
 
 #scroll-tip-1 {

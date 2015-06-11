@@ -21,5 +21,6 @@ var app = angular
   ]);
 
   app.run(function($rootScope, $state) {
-        $rootScope.$state = $state;
+      $rootScope.$state = $state;
     });//On launch assign $state to general rootScope
+  //Clean up background  at some point!

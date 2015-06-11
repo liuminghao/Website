@@ -1,10 +1,8 @@
 /* HTML */
 body {
     font-family: Arial;
-    color: #424242;
     font-size: 18px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin-bottom: 0%;
 }
 
 label { margin-bottom: 20px }
@@ -45,7 +43,6 @@ a:hover {
     }
 
     .navbar a { color: black; }
-
     .navbar-right a { color: black; }
 
     .navbar button { 
@@ -82,3 +79,11 @@ a:hover {
 .vertSpace5 { margin-bottom: 5%; }
 .vertSpace8 { margin-bottom: 8%; }
 .vertSpace10 { margin-bottom: 10%; }
+.vertSpace20 { margin-bottom: 20%; }
+
+/* ID's */
+#background { 
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin-top: -3%;
+}

@@ -2,9 +2,9 @@
 
 var app = angular.module('HelpersApp');
 
-	app.controller('viewCtrl', function(match, $state, $scope, after) {
+	app.controller('viewCtrl', function(match, $scope, $rootScope, after) {
 		$scope.checkPage = function(page) {
-			if (match(page, after('.', $state.current.name))) {
+			if (match(page, after('.', $rootScope.$state.current.name))) {
 				return true;
 			} else {
 				return false;

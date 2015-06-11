@@ -9,6 +9,13 @@ var app = angular.module('HelpersApp');
 		};
 	});
 
+	app.factory('before', function() {
+		return function(character, word) {
+			var beforeChar = word.substring(0, word.indexOf(character));
+			return beforeChar;
+		};
+	});
+
 	app.factory('range', function() {
 		return function(start, end) {
 			var range = [];
@@ -29,3 +36,4 @@ var app = angular.module('HelpersApp');
 			}
 		};
 	});
+

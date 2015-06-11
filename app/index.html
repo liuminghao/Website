@@ -17,12 +17,12 @@
     <!-- endbuild -->
   </head>
 
-  <body ng-app="HelpersApp" ng-style="{'background-image':'url(images/backgrounds/blankPhoto.jpg)'}">
+  <body ng-app="HelpersApp" >
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager 
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T2G6RM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -32,74 +32,78 @@
     })(window,document,'script','dataLayer','GTM-T2G6RM');</script>
     <!-- End Google Tag Manager -->
 
-    <div ng-controller="loginCtrl">
-      <nav class="navbar navbar-default transparent">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
+    <div ng-style="{'background-image': 'url(' + bgUrl + ')'}" ng-controller='bgCtrl' id='background'>
+      <div ng-controller="loginCtrl">
+        <nav class="navbar navbar-default transparent">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><button type='button' class='btn btn-default' ng-click='toggleLogin()' ng-hide='signedIn'>Login</button></li>
-              <li><button type='button' class='btn btn-default' ui-sref='preSignup' ng-hide='signedIn'>Sign Up</button></li>
-              <li><a ui-sref='account.genInfo' ng-show='signedIn' style='color: black'>My Account</a></li><!-- update color styling-->
-              <li><button type='button' class='btn btn-default' ng-click='logOut()' ng-show='signedIn'>Log Out</button></li>
-            </ul>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><button type='button' class='btn btn-default' ng-click='toggleLogin()' ng-hide='signedIn'>Login</button></li>
+                <li><button type='button' class='btn btn-default' ui-sref='preSignup' ng-hide='signedIn'>Sign Up</button></li>
+                <li><a ui-sref='account.genInfo' ng-show='signedIn' style='color: black'>My Account</a></li><!-- update color styling-->
+                <li><button type='button' class='btn btn-default' ng-click='logOut()' ng-show='signedIn'>Log Out</button></li>
+              </ul>
 
-            <ul class="nav nav-justified">
-              <li><a ui-sref="home.landing">Home</a></li>
-              <li><a ui-sref='aboutUs.ourStory'>About Us</a></li>
-              <li><a ui-sref='contactUs.press'>Contact Us</a></li>
-              <li><a ui-sref='faq.everyone'>FAQ</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+              <ul class="nav nav-justified">
+                <li><a ui-sref="home.landing">Home</a></li>
+                <li><a ui-sref='aboutUs.ourStory'>About Us</a></li>
+                <li><a ui-sref='contactUs.press'>Contact Us</a></li>
+                <li><a ui-sref='faq.everyone'>FAQ</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
 
-      <modal title='Login' appear='showLogin()'><!-- Login popup -->
-        <form role='form'>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model='loginDetails.username_or_email' required/>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password" ng-model='loginDetails.password' required/>
-          </div>
-          <button type="submit" class="btn btn-default" ng-click='loginAttempt(loginDetails)'>Submit</button>
-        </form>
-      </modal>
-    </div>
-
-    <div ui-view></div> <!-- Where the code from other pages will be injected -->
-
-    <div class="navbar navbar-default transparent centered">
-      <div class='navbar-inner navbar-collapse collapse' id="footerNav"><!-- Footer nav for normal computers -->
-        <ul class='list-inline'>
-          <li><p ui-sref='termsOfUse' class='btn btn-link'>Terms of Use</p></li>
-          <li><p ui-sref='privacy' class='btn btn-link'>Privacy</p></li>
-          <li><p ui-sref='academicIntegrity' class='btn btn-link'>Academic Integrity</p></li>
-          <li><p ui-sref='safetyTips' class='btn btn-link'>Safety Tips</p></li>
-        </ul>
-        <p>&copy; Helpers Technology, Inc 2014-2015 | All Rights Reserved</p>
+        <modal title='Login' appear='showLogin()'><!-- Login popup -->
+          <form role='form'>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model='loginDetails.username_or_email' required/>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" ng-model='loginDetails.password' required/>
+            </div>
+            <button type="submit" class="btn btn-default" ng-click='loginAttempt(loginDetails)'>Submit</button>
+          </form>
+        </modal>
       </div>
 
-      <div class="navbar-header"> <!-- Footer nav for mobile -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#footerNav">
-          <span class="sr-only">Toggle navigation</span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-        </button>
-      </div>
+      <div ui-view></div> <!-- Where the code from other pages will be injected -->
+
+      <div class="navbar navbar-default transparent centered">
+        <div class='navbar-inner navbar-collapse collapse' id="footerNav"><!-- Footer nav for normal computers -->
+          <ul class='list-inline'>
+            <li><p ui-sref='termsOfUse' class='btn btn-link'>Terms of Use</p></li>
+            <li><p ui-sref='privacy' class='btn btn-link'>Privacy</p></li>
+            <li><p ui-sref='academicIntegrity' class='btn btn-link'>Academic Integrity</p></li>
+            <li><p ui-sref='safetyTips' class='btn btn-link'>Safety Tips</p></li>
+          </ul>
+          <p>&copy; Helpers Technology, Inc 2014-2015 | All Rights Reserved</p>
+        </div>
+
+        <div class="navbar-header"> <!-- Footer nav for mobile -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#footerNav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+        </div>
+
+        <div class='vertSpace20'></div><!-- To extend the background -->
+    </div><!-- /background  -->
 
 
     <script>
@@ -126,7 +130,7 @@
     <script src="bower_components/backbone/backbone.js"></script>
     <script src="bower_components/backbone.localStorage/backbone.localStorage.js"></script>
     <script src="bower_components/ngstorage/ngStorage.js"></script>
-    <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-css/angular-css.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -140,12 +144,13 @@
         <script src="scripts/controllers/upload.js"></script>
         <script src="scripts/controllers/faq.js"></script>
         <script src="scripts/controllers/view.js"></script>
+        <script src="scripts/controllers/bg.js"></script>
         <script src="scripts/directives/modal.js"></script>
         <script src="scripts/factories/user.js"></script>
         <script src="scripts/factories/functions.js"></script>
         <script src="scripts/factories/accountApi.js"></script>
         <script src="scripts/filters/capitalize.js"></script>
-        <script src="scripts/filters/state.js"></script>
+        <script src="scripts/filters/camelCase.js"></script>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <!-- For IE 9 -->
         <!-- endbuild -->
 </body>
