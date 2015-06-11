@@ -5,8 +5,8 @@
     <title>Helpers</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!--<base href='/'>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<base href='/'> -->
+
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="styles/helpers.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="HelpersApp">
+
+  <body ng-app="HelpersApp" ng-style="{'background-image':'url(images/backgrounds/blankPhoto.jpg)'}">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -30,6 +31,7 @@
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-T2G6RM');</script>
     <!-- End Google Tag Manager -->
+
     <div ng-controller="loginCtrl">
       <nav class="navbar navbar-default transparent">
         <div class="container-fluid">
@@ -53,7 +55,7 @@
             </ul>
 
             <ul class="nav nav-justified">
-              <li><a ui-sref="home">Home</a></li>
+              <li><a ui-sref="home.landing">Home</a></li>
               <li><a ui-sref='aboutUs.ourStory'>About Us</a></li>
               <li><a ui-sref='contactUs.press'>Contact Us</a></li>
               <li><a ui-sref='faq.everyone'>FAQ</a></li>
@@ -62,7 +64,7 @@
         </div><!-- /.container-fluid -->
       </nav>
 
-      <modal title='Login' visible='showLogin()'><!-- Login popup -->
+      <modal title='Login' appear='showLogin()'><!-- Login popup -->
         <form role='form'>
           <div class="form-group">
             <label for="email">Email address</label>
@@ -142,8 +144,9 @@
         <script src="scripts/factories/user.js"></script>
         <script src="scripts/factories/functions.js"></script>
         <script src="scripts/factories/accountApi.js"></script>
+        <script src="scripts/filters/capitalize.js"></script>
+        <script src="scripts/filters/state.js"></script>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <!-- For IE 9 -->
-        <script src="scripts/controllers/angular-scroll.js"></script> 
         <!-- endbuild -->
 </body>
 </html>

@@ -23,7 +23,7 @@ app.directive('modal', function () {
     link: function postLink(scope, element, attrs) {
       scope.title = attrs.title;
 
-      scope.$watch(attrs.visible, function(value){
+      scope.$watch(attrs.appear, function(value){
         if(value === true) {
           $(element).modal('show');
         }
@@ -34,13 +34,13 @@ app.directive('modal', function () {
 
       $(element).on('shown.bs.modal', function(){
         scope.$apply(function(){
-          scope.$parent[attrs.visible] = true;
+          scope.$parent[attrs.appear] = true;
         });
       });
 
       $(element).on('hidden.bs.modal', function(){
         scope.$apply(function(){
-          scope.$parent[attrs.visible] = false;
+          scope.$parent[attrs.appear] = false;
         });
       });
     }

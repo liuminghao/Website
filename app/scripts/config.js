@@ -3,15 +3,47 @@
 var app = angular.module('HelpersApp');
 
 app.config( function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/home');
+	$urlRouterProvider.otherwise('/home/landing');
 	//$locationProvider.html5Mode(true);
 
 	$stateProvider
 
 		.state('home', {
+			abstract: true,
 			url: '/home',
-			templateUrl: '../views/home.html'
+			templateUrl: '../views/home/home.html',
+			css: '../styles/home.css'
 		})
+				.state('home.landing', {
+					url: '/landing',
+					templateUrl: '../views/home/landing.html',
+					css: '../styles/home.css'
+				})
+				.state('home.whatever', {
+					url: '/whatever',
+					templateUrl: '../views/home/whatever.html',
+					css: '../styles/home.css'
+				})
+				.state('home.whenever', {
+					url: '/whenever',
+					templateUrl: '../views/home/whenever.html',
+					css: '../styles/home.css'
+				})
+				.state('home.whoever', {
+					url: '/whoever',
+					templateUrl: '../views/home/whoever.html',
+					css: '../styles/home.css'
+				})
+				.state('home.wherever', {
+					url: '/wherever',
+					templateUrl: '../views/home/wherever.html',
+					css: '../styles/home.css'
+				})
+				.state('home.moneyEver', {
+					url: '/moneyEver',
+					templateUrl: '../views/home/moneyEver.html',
+					css: '../styles/home.css'
+				})											
 		.state('aboutUs', {
 			abstract: true,
 			url: '/aboutUs',

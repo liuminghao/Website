@@ -1,0 +1,40 @@
+﻿<div class='container'>
+  <div class='row'>
+    <div class='col-xs-3'><!-- Side navigation -->
+      <div class='col-xs-4'>
+        <a ui-sref="home.landing"><img src='images/smallLogo.png' class='img-responsive'></a>
+      </div>
+      <div class='col-xs-8'>
+        <p>Welcome!</p>
+      </div>
+
+      <div class='col-xs-12'>
+        <form ng-ctrl='viewCtrl'>
+          <div class='form-group'>
+            <div class='radio' ng-repeat="page in ['whatever', 'whenever', 'whoever', 'wherever']">
+              <label>
+                <input type='radio' name='homeNav' ng-checked='checkPage("{{page}}")' ui-sref='home.{{page}}'>{{page | capitalize}}
+              </label>
+            </div>
+
+            <div class='radio'><!-- Special for $$$ever due to weird characters -->
+              <label class='radio-inline'>
+                <input type='radio' name='homeNav' ng-checked='checkPage("moneyEver")'ui-sref='home.moneyEver'>$$$ever
+              </label>
+            </div>
+          </div>
+        </form><!-- /viewCtrl form -->
+      </div>
+    </div><!-- /side nav-->
+
+    <div class='col-xs-9'>
+      <div id="root">
+        <div id="container">
+          <div id="content">
+            <div ui-view></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /main views -->
+  </div><!-- /row -->
+</div><!-- /container -->

@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('HelpersApp', [
     'ngAnimate',
     'ngCookies',
@@ -19,3 +19,7 @@ angular
     'ui.router',
     'door3.css'
   ]);
+
+  app.run(function($rootScope, $state) {
+        $rootScope.$state = $state;
+    });//On launch assign $state to general rootScope
