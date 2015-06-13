@@ -8,10 +8,12 @@
 		</div>
 	</div>
 
+  <div class="vertSpace25"></div>
+
 	<div class="row" ng-controller='faqCtrl'>
 		<!-- Side Navigation Bar-->
 		<div class="col-xs-3" ng-controller='viewCtrl'>
-			<img src="images/Logo1 + Helpers.png" style="float:left"/> 
+			<img src="images/logoWithHelpers.png" style="float:left"/>
 			<p class="logo">FAQ</p>
 
 			<div class="form-group">
@@ -50,7 +52,7 @@
 				</div>
 				<div class='row'>
 					<div class='col-xs-2'></div>
-					<div class='col-xs-10'>				
+					<div class='col-xs-10'>
 						<div class="form-group" ng-show="checkPage('student')">
 							<div class='radio' ng-repeat='q in qStudent'>
 								<label><input type='radio' id='student{{$index}}' name='studentQuestions' ng-click='scrollTo("student", {{$index}})'>{{q.question}}</label>
@@ -60,7 +62,7 @@
 				</div>
 			</div><!-- /students nav -->
 		</div><!-- /side-nav-->
-    
+
 		<div ui-view></div>
 	</div>
 

@@ -1,27 +1,22 @@
-.contactUs {
-	font-family: AvenirNext-Regular;
-	color: #4A4A4A;
-}
-			
-.contactUs .title{
+.title{
 	font-family: AvenirNext-Bold;
 	font-size: 36px;
 	color: #FFFFFF;
 	line-height: 49px;
 }
 
-.contactUs label{
+ label{
 	font-size: 23px;
 	line-height: 19px;
 }
 
-.contactUs .subtitle {
+.subtitle {
 	font-size: 25px;
 	font-weight: bold;
 	line-height: 34px;
 }
 
-.contactUs .content {
+.content {
 	font-size: 20px;
 	line-height: 27px;
 }

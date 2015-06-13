@@ -13,5 +13,5 @@ var app = angular.module('HelpersApp');
       } else {
       	$scope.bgUrl = 'images/backgrounds/' + $filter('camelCase')(beforePeriod) + '.png';
       }
-    });  
-	});
+    });
+	});//Clean up background  at some point!

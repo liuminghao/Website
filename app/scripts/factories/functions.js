@@ -11,8 +11,12 @@ var app = angular.module('HelpersApp');
 
 	app.factory('before', function() {
 		return function(character, word) {
-			var beforeChar = word.substring(0, word.indexOf(character));
-			return beforeChar;
+      if (word.indexOf(character) === -1) {
+        return word;
+      } else {
+        var beforeChar = word.substring(0, word.indexOf(character));
+        return beforeChar;
+      }
 		};
 	});
 

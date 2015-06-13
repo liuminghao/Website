@@ -48,33 +48,33 @@ app.config( function($stateProvider, $urlRouterProvider) {
 			abstract: true,
 			url: '/aboutUs',
 			templateUrl: '../views/aboutUs/aboutUs.html',
-			css: '../styles/aboutUs.css'
+			css: '../styles/aboutAndContact.css'
 		})
 				.state('aboutUs.ourStory', {
 					url: '/ourStory',
 					templateUrl: '../views/aboutUs/ourStory.html',
-					css: '../styles/aboutUs.css'
+					css: '../styles/aboutAndContact.css'
 				})
 				.state('aboutUs.ourVision', {
 					url: '/ourVision',
 					templateUrl: '../views/aboutUs/ourVision.html',
-					css: '../styles/aboutUs.css'
+					css: '../styles/aboutAndContact.css'
 				})
 		.state('contactUs', {
 			abstract: true,
 			url: '/contactUs',
 			templateUrl: '../views/contactUs/contactUs.html',
-			css: '../styles/contactUs.css'
+			css: '../styles/aboutAndContact.css'
 		})
 				.state('contactUs.press', {
 					url: '/press',
 					templateUrl: '../views/contactUs/press.html',
-					css: '../styles/contactUs.css'
+					css: '../styles/aboutAndContact.css'
 				})
 				.state('contactUs.joinUs', {
 					url: '/joinUs',
 					templateUrl: '../views/contactUs/joinUs.html',
-					css: '../styles/contactUs.css'
+					css: '../styles/aboutAndContact.css'
 				})
 		.state('faq', {
 			abstract: true,
