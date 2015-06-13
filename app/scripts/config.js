@@ -12,12 +12,16 @@ app.config( function($stateProvider, $urlRouterProvider) {
 			abstract: true,
 			url: '/home',
 			templateUrl: '../views/home/home.html',
-			css: '../styles/home.css'
+      data: {
+        css: '../styles/home.css'
+      }//Note this isn't working currently
 		})
 				.state('home.landing', {
 					url: '/landing',
 					templateUrl: '../views/home/landing.html',
-					css: '../styles/home.css'
+					data: {
+            css: '../styles/home.css'
+          }
 				})
 				.state('home.whatever', {
 					url: '/whatever',
@@ -43,7 +47,7 @@ app.config( function($stateProvider, $urlRouterProvider) {
 					url: '/moneyEver',
 					templateUrl: '../views/home/moneyEver.html',
 					css: '../styles/home.css'
-				})											
+				})
 		.state('aboutUs', {
 			abstract: true,
 			url: '/aboutUs',
