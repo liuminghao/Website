@@ -29,15 +29,3 @@ var app = angular.module('HelpersApp');
 			return range;
 		};
 	});
-
-	app.factory('match', function() {
-		return function(itemA, itemB) {
-			if (itemA === itemB) {
-				return true;
-			}
-			else {
-				return false;
-			}
-		};
-	});
-

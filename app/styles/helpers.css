@@ -1,13 +1,13 @@
 /* HTML */
 body {
-    font-family: Arial;
+    font-family: AvenirNext-Bold, serif;
     font-size: 18px;
     margin-bottom: 0%;
 }
 
 label { margin-bottom: 20px }
 
-hr { 
+hr {
     border: none;
     height: 1px;
     color: #bcbcbc;
@@ -28,24 +28,19 @@ a:hover {
 
 /* Classes */
     /* Navbar */
-    .navbar { 
+    .navbar {
         margin-top: 3%;
         font-size: 25px;
     }
 
-    .navbar.transparent { 
-        background: transparent;
-        border: none;
-    }
-
     .navbar li:hover {
-        text-decoration: underline;        
+        text-decoration: underline;
     }
 
     .navbar a { color: black; }
     .navbar-right a { color: black; }
 
-    .navbar button { 
+    .navbar button {
         color: black;
         margin-left: 20px;/*Not responsive currently, fix this! */
     }
@@ -82,8 +77,19 @@ a:hover {
 .vertSpace20 { margin-bottom: 20%; }
 .vertSpace25 { margin-bottom: 25%; }
 
+.transparent {
+  background: transparent;
+  border: none;
+}
+
+.white { color: white; }
+
+.glyphicon {
+  font-size: 40px;
+}
+
 /* ID's */
-#background { 
+#background {
     background-size: 100% auto;
     background-repeat: no-repeat;
     margin-top: -3%;

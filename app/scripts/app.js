@@ -16,7 +16,8 @@ var app = angular
     'ngSanitize',
     'ngTouch',
     'ngStorage',
-    'ui.router'
+    'ui.router',
+    'door3.css'
   ]);
 
   app.run(function($rootScope, $state) {
