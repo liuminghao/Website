@@ -1,1 +1,1 @@
-<div class="content col-xs-9"> <h3 class="centered"> For Tutors </h3> <ol> <div ng-repeat="q in qTutor"> <li><dt><b>{{q.question}}</b></li> <dd><p>{{q.answer}}</p> </div> </ol> </div>
+<div class="content col-xs-9"> <h3 class="centered"> For Tutors </h3> <ol> <li ng-repeat-start="q in qTutor"> <dt><b>{{q.question}}</b> </li> <dd ng-repeat-end=""><p>{{q.answer}}</p> </ol> </div>

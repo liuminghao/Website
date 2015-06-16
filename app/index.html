@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ul class="nav nav-justified">
             <li><a ui-sref="home">Home</a></li>
             <li><a class="clear" ui-sref="aboutUs.ourStory">About Us</a></li>
-            <li><a ui-sref="contactUs.press">Contact Us</a></li>
+            <li><a style="background: transparent" ui-sref="contactUs.press">Contact Us</a></li>
             <li><a ui-sref="faq.everyone">FAQ</a></li>
           </ul>
         </div>
@@ -97,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div ui-view></div>
   <!-- Where the code from other pages will be injected -->
 
-  <div class="row">
+  <div class="row"><!-- footers nav -->
     <div class="col-xs-10 col-xs-offset-2">
       <div class="navbar navbar-default transparent centered" ng-controller="scrollCtrl">
         <div class="navbar-inner"><!-- Footer nav for normal computers -->
@@ -110,12 +110,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <p>&copy; Helpers Technology, Inc 2014-2015 | All Rights Reserved</p>
         </div>
       </div>
-      <div class="vertSpace20"></div>
-      <!-- To extend the background -->
     </div>
-    <!-- /background  -->
   </div>
+
+  <span class="glyphicon glypicon-upload" style="position: fixed; bottom: 20px; right: 20px; color: red"></span>
 </div>
+<!-- /background  -->
+
 
 <script>
   !function (A, n, g, u, l, a, r) {

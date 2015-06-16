@@ -7,11 +7,14 @@
   <div class='row'>
     <div class="jumbotron transparent"><!-- landing -->
       <div class="centered">
-        <img style="margin: 0 auto;" src="../images/Home/longLogo.png" class="img-responsive"/>
+        <img src="../images/Home/longLogo.png" class="img-responsive img-centered"/>
 
         <div id="subtitle">
           <h4>An efficient platform for you to connect with tutors and students.</h4>
         </div>
+
+        <div class="vertSpace5"></div>
+
         <div>
           <button class="btn btn-default" type="button" ui-sref='preSignup'><strong>Become a
             Student</strong></button>
@@ -21,32 +24,37 @@
       </div>
     </div>
     <!-- /landing -->
+  </div>
+  <!-- /row -->
 
-    <div ng-repeat="page in homePages" style="background: rgba({{page.background}}, .4)" class="jumbotron">
-      <div>
-        <h1> {{page.title}} </h1>
 
-        <div class="row">
+  <div ng-repeat="page in homePages" style="background: rgba({{page.background}}, .4)" class="jumbotron">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="centered title">
+          <img class="img-responsive img-centered" src="{{page.pinImg}}"/>
+          {{page.title}}
+        </h1>
+
+        <div class="row centered">
           <div class="col-xs-4">
-            <h5>For Students...</h5>
+            <h5 class="subtitle">For Students...</h5>
 
             <p>{{page.forStudents}}</p>
           </div>
 
-          <div class="col-xs-4">
-            <img src="{{page.pinImg}}"/>
-            <img src="../images/Home/iPhone_5s.png"/>
+          <div class="col-xs-4 centered">
+            <img class="img-responsive img-centered" src="../images/Home/iPhone_5s.png"/>
           </div>
 
           <div class="col-xs-4">
-            <h5>For Tutors...</h5>
+            <h5 class="subtitle">For Tutors...</h5>
 
             <p>{{page.forTutors}}</p>
           </div>
         </div>
-        <!-- /row -->
       </div>
-    </div><!-- /whatever... -->
+    </div>
   </div>
-  <!-- /row -->
+  <!-- /whatever... -->
 </div><!-- /container -->
