@@ -1,9 +1,9 @@
 <div class="content col-xs-9">
-	<h3 class = "centered"> For Students </h3>
-	<ol>
-		<div ng-repeat = "q in qStudent">
-			<li><dt><b>{{q.question}}</b></dt></li>
-			<dd><p>{{q.answer}}</p></dd>
-		</div>
-	</ol>
+  <h3 class="centered"> For Students </h3>
+  <ol>
+    <li ng-repeat-start="q in qStudent">
+      <dt><b>{{q.question}}</b></dt>
+    </li>
+    <dd ng-repeat-end=""><p>{{q.answer}}</p></dd>
+  </ol>
 </div>

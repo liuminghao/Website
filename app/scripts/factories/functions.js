@@ -4,8 +4,7 @@ var app = angular.module('HelpersApp');
 
 	app.factory('after', function() {
 		return function(character, word) {
-			var afterChar = word.substring(word.indexOf(character) + 1);
-			return afterChar;
+			return word.substring(word.indexOf(character) + 1);
 		};
 	});
 
@@ -14,8 +13,7 @@ var app = angular.module('HelpersApp');
       if (word.indexOf(character) === -1) {
         return word;
       } else {
-        var beforeChar = word.substring(0, word.indexOf(character));
-        return beforeChar;
+        return word.substring(0, word.indexOf(character));
       }
 		};
 	});

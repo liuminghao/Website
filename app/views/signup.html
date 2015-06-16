@@ -1,71 +1,79 @@
-<div class = "container signup" ng-controller = "signupCtrl">
+<div class="container signup" ng-controller="signupCtrl">
+  <style>
+    #background {
+      background-image: url('../images/backgrounds/signup.png');
+    }
+  </style>
 
-  <div class = "header">
+  <div class="header">
     <h1>Sign Up</h1>
   </div>
 
   <div class="vertSpace25"></div>
 
-  <div class = "col-xs-2">
+  <div class="col-xs-2">
     <div>
       <img src="images/logoWithHelpers.png" class="img-responsive">
     </div>
 
-    <div class = "radio">
-      <label><input type = "radio" ng-checked = "true" name = "optradio" disabled>Create Account</label>
+    <div class="radio">
+      <label><input type="radio" ng-checked="true" name="optradio" disabled>Create Account</label>
     </div>
   </div>
 
-  <div class = "col-xs-9">
+  <div class="col-xs-9">
 
-    <div class = "row">
-      <h2 class = "centered title">
+    <div class="row">
+      <h2 class="centered title">
         Create Your Account
       </h2>
     </div>
 
-    <div class = "row">
+    <div class="row">
 
-      <p class = "centered subtitle">
+      <p class="centered subsection">
         Required sections are starred *
       </p>
     </div>
 
-    <div class = "row content">
+    <div class="row content">
 
-      <form class = "form-horizontal" name = "signup" ng-submit = "register(newUser, signup.$valid)">
+      <form class="form-horizontal" name="signup" ng-submit="register(newUser, signup.$valid)">
 
-        <div class = "form-group">
-          <div class = "col-xs-6">
-            <label class = "control-label col-xs-6">First Name*</label>
-            <div class = "col-xs-6">
-              <input type = "text" class = "form-control" ng-model = "newUser.firstName" required>
+        <div class="form-group">
+          <div class="col-xs-6">
+            <label class="control-label col-xs-6">First Name*</label>
+
+            <div class="col-xs-6">
+              <input type="text" class="form-control" ng-model="newUser.firstName" required>
             </div>
           </div>
 
-          <div class = "col-xs-6">
-            <label class = "col-xs-6">Last Name*</label>
-            <div class = "col-xs-6">
-              <input type = "text" class = "form-control" ng-model = "newUser.lastName" required>
+          <div class="col-xs-6">
+            <label class="col-xs-6">Last Name*</label>
+
+            <div class="col-xs-6">
+              <input type="text" class="form-control" ng-model="newUser.lastName" required>
             </div>
           </div>
         </div>
 
-        <div class = "form-group">
-          <div class = "col-xs-6">
-            <label class = "control-label col-xs-6">Date of Birth*</label>
-            <div class = "col-xs-6">
-              <select class='form-control' ng-model = "newUser.DoB" required>
-                <option value = '' selected = "selected">Day</option>
+        <div class="form-group">
+          <div class="col-xs-6">
+            <label class="control-label col-xs-6">Date of Birth*</label>
+
+            <div class="col-xs-6">
+              <select class='form-control' ng-model="newUser.DoB" required>
+                <option value='' selected="selected">Day</option>
                 <option value='{{day}}' ng-repeat='day in range(1,31)'>{{day}}</option>
               </select>
             </div>
           </div>
 
-          <div class = "col-xs-6">
-            <div class = "col-xs-6">
-              <select class='form-control' ng-model = "newUser.MoB" required>
-                <option value='' selected = "selected">Month</option>
+          <div class="col-xs-6">
+            <div class="col-xs-6">
+              <select class='form-control' ng-model="newUser.MoB" required>
+                <option value='' selected="selected">Month</option>
                 <option value='1'>January</option>
                 <option value='2'>February</option>
                 <option value='3'>March</option>
@@ -81,56 +89,61 @@
               </select>
             </div>
 
-            <div class = "col-xs-6">
-              <select class="form-control" ng-model = "newUser.YoB" required>
-                <option value='' selected = "selected">Year</option>
+            <div class="col-xs-6">
+              <select class="form-control" ng-model="newUser.YoB" required>
+                <option value='' selected="selected">Year</option>
                 <option ng-repeat='year in range(1925, 2015)' value="{{year}}">{{year}}</option>
               </select>
             </div>
           </div>
         </div>
 
-        <div class = "form-group">
-          <div class = "col-xs-6">
-            <label class = "control-label col-xs-6">Password*</label>
-            <div class = "col-xs-6">
-              <input type = "password" class = "form-control" ng-model = "newUser.password" ng-blur = "checkPass()" required>
+        <div class="form-group">
+          <div class="col-xs-6">
+            <label class="control-label col-xs-6">Password*</label>
+
+            <div class="col-xs-6">
+              <input type="password" class="form-control" ng-model="newUser.password" ng-blur="checkPass()" required>
             </div>
           </div>
 
-          <div class = "col-xs-6">
-            <label class = "col-xs-6">Confirm Password*</label>
-            <div class = "col-xs-6">
-              <input type = "password" class = "form-control" ng-model = "confirmPassword"  ng-blur = "checkPass()" required>
-            </div>
-            <p class = "help-block centered" ng-show = "!passValidate">Passwords do not match</p>
-          </div>
-        </div>
+          <div class="col-xs-6">
+            <label class="col-xs-6">Confirm Password*</label>
 
-        <div class = "form-group">
-          <div class = "col-xs-6">
-            <label class = "control-label col-xs-6">Email*</label>
-            <div class = "col-xs-6">
-              <input type = "email" class = "form-control" ng-model = "newUser.email" ng-blur = "bcEmail()" required>
+            <div class="col-xs-6">
+              <input type="password" class="form-control" ng-model="confirmPassword" ng-blur="checkPass()" required>
             </div>
-            <p class = "help-block centered" ng-show = "!bcValidate">Please enter a Boston College email</p>
-          </div>
-
-          <div class = "col-xs-6">
-            <label class = "col-xs-6">Confirm Email*</label>
-            <div class = "col-xs-6">
-              <input type = "email" class = "form-control" ng-model = "confirmEmail" ng-blur = "checkEmail()" required>
-            </div>
-            <p class = "help-block centered" ng-show = "!emailValidate">Emails do not match</p>
+            <p class="help-block centered" ng-show="!passValidate">Passwords do not match</p>
           </div>
         </div>
 
-        <div class = "form-group">
+        <div class="form-group">
+          <div class="col-xs-6">
+            <label class="control-label col-xs-6">Email*</label>
 
-          <div class = "col-xs-6">
-            <label class = "control-label col-xs-6">School*</label>
-            <div class = "col-xs-6">
-              <select class='form-control' ng-model = "newUser.school" required>
+            <div class="col-xs-6">
+              <input type="email" class="form-control" ng-model="newUser.email" ng-blur="bcEmail()" required>
+            </div>
+            <p class="help-block centered" ng-show="!bcValidate">Please enter a Boston College email</p>
+          </div>
+
+          <div class="col-xs-6">
+            <label class="col-xs-6">Confirm Email*</label>
+
+            <div class="col-xs-6">
+              <input type="email" class="form-control" ng-model="confirmEmail" ng-blur="checkEmail()" required>
+            </div>
+            <p class="help-block centered" ng-show="!emailValidate">Emails do not match</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+
+          <div class="col-xs-6">
+            <label class="control-label col-xs-6">School*</label>
+
+            <div class="col-xs-6">
+              <select class='form-control' ng-model="newUser.school" required>
                 <option value='' selected='selected'></option>
                 <option>Boston College</option>
               </select>
@@ -139,13 +152,14 @@
 
         </div>
 
-        <div class = "form-group">
+        <div class="form-group">
 
-          <div class = "col-xs-6">
-            <label class = "control-label col-xs-6">Academic Program*</label>
-            <div class = "col-xs-6">
-              <select class='form-control' ng-model = "newUser.academicProgram" required>
-                <option value='' selected = "selected"></option>
+          <div class="col-xs-6">
+            <label class="control-label col-xs-6">Academic Program*</label>
+
+            <div class="col-xs-6">
+              <select class='form-control' ng-model="newUser.academicProgram" required>
+                <option value='' selected="selected"></option>
                 <option>High School</option>
                 <option>Undergraduate</option>
                 <option>Graduate</option>
@@ -156,13 +170,14 @@
 
         </div>
 
-        <div class = "form-group">
+        <div class="form-group">
 
-          <div class = "col-xs-6">
-            <label class = "control-label col-xs-6">Graduation Year*</label>
-            <div class = "col-xs-6">
-              <select class="form-control" ng-model = "newUser.graduationYear" required>
-                <option value = ''></option>
+          <div class="col-xs-6">
+            <label class="control-label col-xs-6">Graduation Year*</label>
+
+            <div class="col-xs-6">
+              <select class="form-control" ng-model="newUser.graduationYear" required>
+                <option value=''></option>
                 <option value="{{year}}" ng-repeat='year in range(1960, 2025)'>{{year}}</option>
               </select>
             </div>
@@ -170,10 +185,10 @@
 
         </div>
 
-        <div class = "row">
-          <div class = "col-xs-5"></div>
-          <div class = "col-xs-2">
-            <button type = "submit" class = "btn btn-block">Submit</button>
+        <div class="row">
+          <div class="col-xs-5"></div>
+          <div class="col-xs-2">
+            <button type="submit" class="btn btn-block">Submit</button>
           </div>
         </div>
 
@@ -182,5 +197,3 @@
     </div>
   </div>
 </div>
-
-<link type="text/css" rel = "stylesheet" href = "styles/signup.css" />

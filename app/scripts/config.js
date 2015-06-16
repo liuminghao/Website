@@ -3,108 +3,61 @@
 var app = angular.module('HelpersApp');
 
 app.config( function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/home/landing');
+	$urlRouterProvider.otherwise('/home');
 	//$locationProvider.html5Mode(true);
 
 	$stateProvider
 
 		.state('home', {
-			abstract: true,
 			url: '/home',
-			templateUrl: '../views/home/home.html',
-      data: {
-        css: '../styles/home.css'
-      }//Note this isn't working currently
+			templateUrl: '../views/home.html'
 		})
-				.state('home.landing', {
-					url: '/landing',
-					templateUrl: '../views/home/landing.html',
-					data: {
-            css: '../styles/home.css'
-          }
-				})
-				.state('home.whatever', {
-					url: '/whatever',
-					templateUrl: '../views/home/whatever.html',
-					css: '../styles/home.css'
-				})
-				.state('home.whenever', {
-					url: '/whenever',
-					templateUrl: '../views/home/whenever.html',
-					css: '../styles/home.css'
-				})
-				.state('home.whoever', {
-					url: '/whoever',
-					templateUrl: '../views/home/whoever.html',
-					css: '../styles/home.css'
-				})
-				.state('home.wherever', {
-					url: '/wherever',
-					templateUrl: '../views/home/wherever.html',
-					css: '../styles/home.css'
-				})
-				.state('home.moneyEver', {
-					url: '/moneyEver',
-					templateUrl: '../views/home/moneyEver.html',
-					css: '../styles/home.css'
-				})
 		.state('aboutUs', {
 			abstract: true,
 			url: '/aboutUs',
-			templateUrl: '../views/aboutUs/aboutUs.html',
-			css: '../styles/aboutAndContact.css'
+			templateUrl: '../views/aboutUs/aboutUs.html'
 		})
 				.state('aboutUs.ourStory', {
 					url: '/ourStory',
-					templateUrl: '../views/aboutUs/ourStory.html',
-					css: '../styles/aboutAndContact.css'
+					templateUrl: '../views/aboutUs/ourStory.html'
 				})
 				.state('aboutUs.ourVision', {
 					url: '/ourVision',
-					templateUrl: '../views/aboutUs/ourVision.html',
-					css: '../styles/aboutAndContact.css'
+					templateUrl: '../views/aboutUs/ourVision.html'
 				})
 		.state('contactUs', {
 			abstract: true,
 			url: '/contactUs',
-			templateUrl: '../views/contactUs/contactUs.html',
-			css: '../styles/aboutAndContact.css'
+			templateUrl: '../views/contactUs/contactUs.html'
 		})
 				.state('contactUs.press', {
 					url: '/press',
-					templateUrl: '../views/contactUs/press.html',
-					css: '../styles/aboutAndContact.css'
+					templateUrl: '../views/contactUs/press.html'
 				})
 				.state('contactUs.joinUs', {
 					url: '/joinUs',
-					templateUrl: '../views/contactUs/joinUs.html',
-					css: '../styles/aboutAndContact.css'
+					templateUrl: '../views/contactUs/joinUs.html'
 				})
 		.state('faq', {
 			abstract: true,
 			url: '/faq',
-			templateUrl: '../views/faq/faq.html',
-			css: '../styles/faq.css'
+			templateUrl: '../views/faq/faq.html'
 		})
 				.state('faq.everyone', {
 					url: '/everyone',
-					templateUrl: '../views/faq/everyone.html',
-					css: '../styles/faq.css'
+					templateUrl: '../views/faq/everyone.html'
 				})
 				.state('faq.tutor', {
 					url: '/tutor',
-					templateUrl: '../views/faq/tutor.html',
-					css: '../styles/faq.css'
+					templateUrl: '../views/faq/tutor.html'
 				})
 				.state('faq.student', {
 					url: '/student',
-					templateUrl: '../views/faq/student.html',
-					css: '../styles/faq.css'
+					templateUrl: '../views/faq/student.html'
 				})
 		.state('preSignup', {
 			url: '/preSignup',
-			templateUrl: '../views/preSignup.html',
-			controller: 'preSignup'
+			templateUrl: '../views/preSignup.html'
 		})
 		.state('signup', {
 			url: '/signup',
@@ -116,23 +69,19 @@ app.config( function($stateProvider, $urlRouterProvider) {
 		})
 				.state('safetyTips', {
 					url: '/safetyTips',
-					templateUrl: '../views/footers/safetyTips.html',
-					css: '../styles/footers.css'
+					templateUrl: '../views/footers/safetyTips.html'
 				})
 				.state('academicIntegrity', {
 					url: '/academicIntegrity',
-					templateUrl: '../views/footers/academicIntegrity.html',
-					css: '../styles/footers.css'
+					templateUrl: '../views/footers/academicIntegrity.html'
 				})
 				.state('termsOfUse', {
 					url: '/termsOfUse',
-					templateUrl: '../views/footers/termsOfUse.html',
-					css: '../styles/footers.css'
+					templateUrl: '../views/footers/termsOfUse.html'
 				})
 				.state('privacy', {
 					url: '/privacy',
-					templateUrl: '../views/footers/privacy.html',
-					css: '../styles/footers.css'
+					templateUrl: '../views/footers/privacy.html'
 				})
 		.state('account', {
 			abstract: true,
