@@ -1,6 +1,6 @@
 /* HTML */
 body {
-    font-family: AvenirNext-Bold, serif;
+    font-family: Avenir Next, arial;/*UPDATE ME */
     font-size: 18px;
     margin-bottom: 0;
 }
@@ -83,8 +83,8 @@ a:hover {
   border: none;
 }
 
-a.clear {
-  background-color: transparent;
+.clear {
+  background: transparent !important;
 }
 
 .white { color: white; }
@@ -102,6 +102,10 @@ a.clear {
 
 .img-centered {
   margin: 0 auto;
+}
+
+.icon-large {
+  font-size: 30px;
 }
 
 
@@ -161,16 +165,6 @@ a.clear {
       border-radius: 6px;
       font-size: 14.89px;
       line-height: 20px;
-    }
-
-    .radio input {
-      background: #FFFFFF;
-      border: 1px solid #D8D8D8;
-    }
-
-    .radio label {
-      font-size: 14px;
-      line-height: 19px;
     }
 
     .alert {

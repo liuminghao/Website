@@ -30,31 +30,9 @@
       </div>
 
       <div class="form-group">
-          <label class="control-label col-xs-2">Academic Program</label>
-          <div class="col-xs-10">
-            <select class='form-control' ng-model='account.academic_program'>
-              <option value='na'>Academic program</option>
-              <option>High School</option>
-              <option>Undergraduate</option>
-              <option>Graduate</option>
-              <option>Other</option>
-            </select>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label for="school" class="control-label col-xs-2">Graduation Year</label>
-          <div class="col-xs-10">
-            <select class="form-control" ng-model='account.graduation_year'>
-              <option value="{{year}}" ng-repeat='year in range(1960, 2025)'>{{year}}</option>
-            </select>
-          </div>
-      </div>
-
-      <div class="form-group">
           <label for="school" class="control-label col-xs-2">Date of Birth</label>
           <div class="col-xs-3">
-            <select class='form-control' ng-model='account.MoB'>
+            <select class='form-control' ng-model='account.profile.MoB'>
               <option value='1'>January</option>
               <option value='2'>February</option>
               <option value='3'>March</option>
@@ -71,14 +49,14 @@
           </div>
 
           <div class='col-xs-3'>
-            <select class='form-control' ng-model='account.DoB'>
-              <option value='{{day}}' ng-repeat='day in range(1,31)'>{{day}}</option>
+            <select class='form-control' ng-model='account.profile.DoB'>
+              <option value='{{day}}' ng-repeat='day in range(1, 31)'>{{day}}</option>
             </select>
           </div>
 
           <div class='col-xs-4'>
-            <select class="form-control" ng-model='account.YoB'>
-              <option  ng-repeat='year in range(1925, 2015)' value="{{year}}">{{year}}</option>
+            <select class="form-control" ng-model='account.profile.YoB'>
+              <option ng-repeat='year in range(1925, 2015)' value="{{year}}">{{year}}</option>
             </select>
         </div>
       </div>
@@ -86,7 +64,7 @@
 
     <div class='centered'>
       <hr>
-      <button class='btn btn-success' style='font-size: 20px; color: black;' ng-click='doNothing()'>Update Profile</button>
+      <button class='btn btn-success' ng-click='updateInfo()'>Update Profile</button>
     </div>
   </div>
 

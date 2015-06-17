@@ -2,12 +2,12 @@
 
 var app = angular.module('HelpersApp');
 
-app.controller('preSignup', function($scope, $location, $http, after) {
-		
+app.controller('preSignupCtrl', function($scope, $state, $http, after) {
+
 		$scope.bcEmail = function() {
 			if (after('@', $scope.newUser.email) === 'bc.edu') {
-				$location.path('signup');
-			}
+				$state.go('signup');
+      }
 			else {
 				$scope.notAvailable = true;
 			}
@@ -29,4 +29,4 @@ app.controller('preSignup', function($scope, $location, $http, after) {
 		};
 	});
 
-	
+

@@ -1,7 +1,7 @@
 <div class="container signup" ng-controller="signupCtrl">
   <style>
     #background {
-      background-image: url('../images/backgrounds/signup.png');
+      background-image: url("../images/backgrounds/signup.png");
     }
   </style>
 
@@ -11,189 +11,98 @@
 
   <div class="vertSpace25"></div>
 
-  <div class="col-xs-2">
-    <div>
-      <img src="images/logoWithHelpers.png" class="img-responsive">
-    </div>
-
-    <div class="radio">
-      <label><input type="radio" ng-checked="true" name="optradio" disabled>Create Account</label>
-    </div>
+  <div class="row">
+    <h2 class="centered title">
+      Create Your Account
+    </h2>
   </div>
 
-  <div class="col-xs-9">
+  <form class="form-horizontal" name="signup" ng-submit="register(newUser, signup.$valid)">
+    <div class="form-group">
+      <label for="name" class="control-label col-xs-2">Full Name</label>
 
-    <div class="row">
-      <h2 class="centered title">
-        Create Your Account
-      </h2>
+      <div class="col-xs-5">
+        <input class="form-control" id="name" placeholder="First Name" ng-model="newUser.first_name" required>
+      </div>
+      <div class="col-xs-5">
+        <input class="form-control" placeholder="Last Name" ng-model="newUser.last_name" required>
+      </div>
     </div>
 
-    <div class="row">
+    <div class="form-group">
+      <label for="password" class="control-label col-xs-2">Password</label>
 
-      <p class="centered subsection">
-        Required sections are starred *
-      </p>
+      <div class="col-xs-5">
+        <input class="form-control" type="password" id="password" ng-model="newUser.password" ng-blur="checkPass()"
+               required>
+
+        <p class="help-block centered" ng-show="!passValidate">Passwords do not match</p>
+      </div>
+
+      <div class="col-xs-5">
+        <input class="form-control" type="password" ng-model="confirm_password" ng-blur="checkPass()" required>
+      </div>
     </div>
 
-    <div class="row content">
+    <div class="form-group">
+      <label for="email" class="control-label col-xs-2">Email</label>
 
-      <form class="form-horizontal" name="signup" ng-submit="register(newUser, signup.$valid)">
+      <div class="col-xs-5">
+        <input type="email" id="email" class="form-control" placeholder="Email" ng-model="newUser.email"
+               ng-blur="bcEmail()" required>
 
-        <div class="form-group">
-          <div class="col-xs-6">
-            <label class="control-label col-xs-6">First Name*</label>
-
-            <div class="col-xs-6">
-              <input type="text" class="form-control" ng-model="newUser.firstName" required>
-            </div>
-          </div>
-
-          <div class="col-xs-6">
-            <label class="col-xs-6">Last Name*</label>
-
-            <div class="col-xs-6">
-              <input type="text" class="form-control" ng-model="newUser.lastName" required>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-xs-6">
-            <label class="control-label col-xs-6">Date of Birth*</label>
-
-            <div class="col-xs-6">
-              <select class='form-control' ng-model="newUser.DoB" required>
-                <option value='' selected="selected">Day</option>
-                <option value='{{day}}' ng-repeat='day in range(1,31)'>{{day}}</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="col-xs-6">
-            <div class="col-xs-6">
-              <select class='form-control' ng-model="newUser.MoB" required>
-                <option value='' selected="selected">Month</option>
-                <option value='1'>January</option>
-                <option value='2'>February</option>
-                <option value='3'>March</option>
-                <option value='4'>April</option>
-                <option value='5'>May</option>
-                <option value='6'>June</option>
-                <option value='7'>July</option>
-                <option value='8'>August</option>
-                <option value='9'>September</option>
-                <option value='10'>October</option>
-                <option value='11'>November</option>
-                <option value='12'>December</option>
-              </select>
-            </div>
-
-            <div class="col-xs-6">
-              <select class="form-control" ng-model="newUser.YoB" required>
-                <option value='' selected="selected">Year</option>
-                <option ng-repeat='year in range(1925, 2015)' value="{{year}}">{{year}}</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-xs-6">
-            <label class="control-label col-xs-6">Password*</label>
-
-            <div class="col-xs-6">
-              <input type="password" class="form-control" ng-model="newUser.password" ng-blur="checkPass()" required>
-            </div>
-          </div>
-
-          <div class="col-xs-6">
-            <label class="col-xs-6">Confirm Password*</label>
-
-            <div class="col-xs-6">
-              <input type="password" class="form-control" ng-model="confirmPassword" ng-blur="checkPass()" required>
-            </div>
-            <p class="help-block centered" ng-show="!passValidate">Passwords do not match</p>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-xs-6">
-            <label class="control-label col-xs-6">Email*</label>
-
-            <div class="col-xs-6">
-              <input type="email" class="form-control" ng-model="newUser.email" ng-blur="bcEmail()" required>
-            </div>
-            <p class="help-block centered" ng-show="!bcValidate">Please enter a Boston College email</p>
-          </div>
-
-          <div class="col-xs-6">
-            <label class="col-xs-6">Confirm Email*</label>
-
-            <div class="col-xs-6">
-              <input type="email" class="form-control" ng-model="confirmEmail" ng-blur="checkEmail()" required>
-            </div>
-            <p class="help-block centered" ng-show="!emailValidate">Emails do not match</p>
-          </div>
-        </div>
-
-        <div class="form-group">
-
-          <div class="col-xs-6">
-            <label class="control-label col-xs-6">School*</label>
-
-            <div class="col-xs-6">
-              <select class='form-control' ng-model="newUser.school" required>
-                <option value='' selected='selected'></option>
-                <option>Boston College</option>
-              </select>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="form-group">
-
-          <div class="col-xs-6">
-            <label class="control-label col-xs-6">Academic Program*</label>
-
-            <div class="col-xs-6">
-              <select class='form-control' ng-model="newUser.academicProgram" required>
-                <option value='' selected="selected"></option>
-                <option>High School</option>
-                <option>Undergraduate</option>
-                <option>Graduate</option>
-                <option>Other</option>
-              </select>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="form-group">
-
-          <div class="col-xs-6">
-            <label class="control-label col-xs-6">Graduation Year*</label>
-
-            <div class="col-xs-6">
-              <select class="form-control" ng-model="newUser.graduationYear" required>
-                <option value=''></option>
-                <option value="{{year}}" ng-repeat='year in range(1960, 2025)'>{{year}}</option>
-              </select>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="col-xs-5"></div>
-          <div class="col-xs-2">
-            <button type="submit" class="btn btn-block">Submit</button>
-          </div>
-        </div>
-
-      </form>
-
+        <p class="help-block centered" ng-show="!bcValidate">Please enter a Boston College email</p>
+      </div>
+      <div class="col-xs-5">
+        <input type="email" class="form-control" placeholder="Email" ng-model="confirmEmail" ng-blur="checkEmail()"
+               required>
+      </div>
     </div>
-  </div>
+
+    <div class="form-group">
+      <label for="school" class="control-label col-xs-2">School</label>
+
+      <div class="col-xs-10">
+        <input class="form-control" id="school" placeholder="School" ng-model="account.school" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="school" class="control-label col-xs-2">Date of Birth</label>
+
+      <div class="col-xs-3">
+        <select class="form-control" ng-model="account.profile.MoB" required>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </div>
+
+      <div class="col-xs-3">
+        <select class="form-control" ng-model="account.profile.DoB" required>
+          <option value="{{day}}" ng-repeat="day in range(1, 31)">{{day}}</option>
+        </select>
+      </div>
+
+      <div class="col-xs-4">
+        <select class="form-control" ng-model="account.profile.YoB" required>
+          <option ng-repeat="year in range(1925, 2015)" value="{{year}}">{{year}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="centered">
+      <button class="btn btn-success" type="submit">Signup!</button>
+    </div>
+  </form>
+
 </div>
