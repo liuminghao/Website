@@ -13,31 +13,13 @@ app.config( function($stateProvider, $urlRouterProvider) {
 			templateUrl: '../views/home.html'
 		})
 		.state('aboutUs', {
-			abstract: true,
 			url: '/aboutUs',
-			templateUrl: '../views/aboutUs/aboutUs.html'
+			templateUrl: '../views/aboutUs.html'
 		})
-				.state('aboutUs.ourStory', {
-					url: '/ourStory',
-					templateUrl: '../views/aboutUs/ourStory.html'
-				})
-				.state('aboutUs.ourVision', {
-					url: '/ourVision',
-					templateUrl: '../views/aboutUs/ourVision.html'
-				})
 		.state('contactUs', {
-			abstract: true,
 			url: '/contactUs',
-			templateUrl: '../views/contactUs/contactUs.html'
+			templateUrl: '../views/contactUs.html'
 		})
-				.state('contactUs.press', {
-					url: '/press',
-					templateUrl: '../views/contactUs/press.html'
-				})
-				.state('contactUs.joinUs', {
-					url: '/joinUs',
-					templateUrl: '../views/contactUs/joinUs.html'
-				})
 		.state('faq', {
 			abstract: true,
 			url: '/faq',

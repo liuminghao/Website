@@ -6,70 +6,50 @@
 
 <div class="vertSpace25"></div>
 
-<div class="form-container" ng-controller="preSignupCtrl">
+<div class="form-container centered" ng-controller="preSignupCtrl">
   <form ng-submit="bcEmail()">
-    <h1 class="centered"> Enter your school email </h1>
-    <br>
+    <div ng-hide="submitted">
+      <h1> Enter your school email </h1>
+      <br>
 
-    <h3 class="centered"> We need your school email to check if <i>Helpers</i> is available at your school. </h3>
-    <br>
+      <h3> We need your school email to check if <i>Helpers</i> is available at your school. </h3>
+      <br>
 
-    <div class="form-group centered">
-      <input type="email" ng-model="newUser.email" placeholder="Input School Email" required/>
-    </div>
-    <br>
-
-    <div class="centered">
-      <button class="btn btn-success" type="submit" ng-click='submitPreForm()'> Submit</button>
-    </div>
-    <br>
-
-    <!-- This will be added when emails are split into two subscription lists transaction and promotional
-    <h2 class="centered">
-      <input type="checkbox" ng-model="subscribe" value="Subscribe"> Subscribe to our mailing list.
-    </h2>
-    <br> -->
-
-    <h3 class="centered" ng-show="notAvailable">Sorry, the <i>Helpers</i> beta is not available at your school.</h3>
-
-    <!-- Anti-Bot signup from MailChimp (currently figuring out how to use this)-->
-
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_ac52c0e2e1d3f827076d7c72b_680f362ae2"
-                                                           tabindex="-1" value=""></div>
-
-    <!-- End anti-bot signup -->
-
-  </form>
-
-  <div id="mc_embed_signup">
-    <form action="//helpers.us11.list-manage.com/subscribe/post?u=ac52c0e2e1d3f827076d7c72b\&amp;id=680f362ae2"
-          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-          target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-        <h2>Subscribe to our mailing list</h2>
-
-        <div class="mc-field-group">
-          <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
-          </label>
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-        </div>
-        <div id="mce-responses" class="clear">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>
-
-        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-
+      <div class="form-group">
+        <input type="email" ng-model="email" placeholder="Input School Email" required/>
       </div>
-    </form>
-  </div>
-  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-  <script type='text/javascript'>(function ($) {
-    window.fnames = new Array();
-    window.ftypes = new Array();
-    fnames[0] = 'EMAIL';
-    ftypes[0] = 'email';
-  }(jQuery));
-  var $mcj = jQuery.noConflict(true);</script>
-  <!--End mc_embed_signup-->
+      <br>
+
+      <div class="form-group">
+        <button class="btn btn-success" type="submit"> Submit</button>
+      </div>
+    </div>
+
+    <div ng-show="showAvail">
+      <div class="vertSpace10"></div>
+
+      <h3>Helpers is ready for you!</h3>
+
+      <p class="btn btn-success" ui-sref="signup">
+        Improve your grades!
+      </p>
+
+      <p class="btn btn-success" ui-sref="signup">
+        Teach and earn money!
+      </p>
+    </div>
+
+    <div class="form-group" ng-show="showNotAvail">
+      <div class="vertSpace10"></div>
+      <h3>Sorry, the <i>Helpers</i> beta is not available at your school.</h3>
+
+      <p>
+        Would you like to subscribe to our mailing list so that you can find out when we are available?
+      </p>
+
+      <p class="btn btn-success">
+        Learn more!
+      </p>
+    </div><!-- SUBCRIBE USERS TO MAILCHIMP LIST -->
+  </form>
 </div>

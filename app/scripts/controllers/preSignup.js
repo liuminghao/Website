@@ -8,34 +8,21 @@ app.factory("Mailchimp", function($resource) {
 
 app.controller('preSignupCtrl', function ($scope, $state, $http, Mailchimp, after) {
   $scope.bcEmail = function () {
-    if (after('@', $scope.newUser.email) === 'bc.edu') {
-      //$state.go('signup');
+    if (after('@', $scope.email) === 'bc.edu') {
+      $scope.showAvail = true;
+    } else {
+      $scope.showNotAvail = true;
     }
-    else {
-      $scope.notAvailable = true;
-    }
+    $scope.submitted = true;
   };
 
-  $scope.submitPreForm = function () {
-    //Mailchimp.save({email_address: $scope.newUser.email, status: 'pending'});
-
-    var $promise = $http({
-      method: 'POST',
-      url: '//helpers.us11.list-manage.com/subscribe/post?u=ac52c0e2e1d3f827076d7c72b&amp;id=680f362ae2',
-      data: JSON.stringify({
-        "email_address": $scope.newUser.email,
-        "status": 'pending'
-      })
-    });
-
-    $promise.success(function () {
-      console.log('SUCCESS');
-    }).error(function () {
-      console.log('FAILED');
-    });
-
-
+  $scope.joinHelpers = function() {
+    $state.go('signup');
   };
+
+  $scope.showAvail = false;
+  $scope.showNotAvail = false;
+  $scope.submitted = false;
 });
 
 
