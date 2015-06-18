@@ -129,6 +129,27 @@ app.factory('updateInfoApi', function ($http) {
   };
 });
 
+app.factory('deleteUserApi', function ($http) {
+  return {
+    deleteUser: function (apikey) {
+      var $promise = $http({
+        method: 'DELETE',
+        url: 'http://54.172.140.235/api/v1/user/7/',
+        headers: {
+          'Content-Type': 'application/json',
+          'AUTHORIZATION': apikey
+        }
+      });
+
+      $promise.success(function (result) {
+        return result;
+      }).error(function() {
+        console.log('Delete error');
+      });
+    }
+  };
+});
+
 app.factory('validationApi', function ($http) {
   return {
     validate: function (email, digit) {
@@ -136,7 +157,7 @@ app.factory('validationApi', function ($http) {
         method: 'POST',
         url: 'http://54.172.140.235/api/v1/user/digit/',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         data: {'email': email, 'digit': digit}
       });

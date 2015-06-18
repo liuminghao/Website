@@ -2,31 +2,42 @@
 
 var app = angular.module('HelpersApp');
 
-app.controller('preSignupCtrl', function($scope, $state, $http, after) {
+app.factory("Mailchimp", function($resource) {
+  return $resource("https://us11.api.mailchimp/3.0/lists/680f362ae2/members");
+});
 
-		$scope.bcEmail = function() {
-			if (after('@', $scope.newUser.email) === 'bc.edu') {
-				$state.go('signup');
-      }
-			else {
-				$scope.notAvailable = true;
-			}
-		};
+app.controller('preSignupCtrl', function ($scope, $state, $http, Mailchimp, after) {
+  $scope.bcEmail = function () {
+    if (after('@', $scope.newUser.email) === 'bc.edu') {
+      //$state.go('signup');
+    }
+    else {
+      $scope.notAvailable = true;
+    }
+  };
 
-		$scope.submitPreForm = function(subscribe) {
-			if (subscribe) {
-				var $promise = $http({
-					url: 'php/store-address.php',
-					data: 'ajax=true&email=' +  escape($scope.newUser.email)
-				});
+  $scope.submitPreForm = function () {
+    //Mailchimp.save({email_address: $scope.newUser.email, status: 'pending'});
 
-				$promise.success(function() {
-					console.log('SUCCESS');
-				}).error(function() {
-					console.log('FAILED');
-				});
-			}
-		};
-	});
+    var $promise = $http({
+      method: 'POST',
+      url: '//helpers.us11.list-manage.com/subscribe/post?u=ac52c0e2e1d3f827076d7c72b&amp;id=680f362ae2',
+      data: JSON.stringify({
+        "email_address": $scope.newUser.email,
+        "status": 'pending'
+      })
+    });
+
+    $promise.success(function () {
+      console.log('SUCCESS');
+    }).error(function () {
+      console.log('FAILED');
+    });
+
+
+  };
+});
+
+
 
 
