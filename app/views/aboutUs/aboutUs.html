@@ -3,27 +3,27 @@
     #background {background-image: url('../images/backgrounds/aboutContact.png'); }
   </style>
 	<div class="row title centered">
-		<div class='col-xs-3'></div>
-		<div class='col-xs-9'>
-			<h1>About Us</h1>
-		</div>
+		<h1>About Us</h1>
 	</div>
 
 	<div class='vertSpace25'></div>
 
-	<div class="row" ng-controller='viewCtrl'>
-	  <div class="col-xs-3">
-			<img src="images/logoWithHelpers.png" />
-			<div class="radio">
-				<label><input ng-checked='checkPage("ourStory")' ui-sref='aboutUs.ourStory' type="radio">Our Story</label>
-			</div>
-			<div class="radio">
-				<label><input ng-checked='checkPage("ourVision")' ui-sref='aboutUs.ourVision' type="radio">Our Vision</label>
-			</div>
-		</div>
+	<div class="row">
+	 	<h2 class="centered subtitle">Our Story</h2>
 
-		<div class="col-xs-9">
-			<div ui-view></div>
+		<div class="content">
+			<p>
+				Helpers was founded by four students at Boston College. Our founding philosophy was to design an efficient platform where students can provide academic support to their peers. Our application helps students find tutors, and moreover it allows students to become tutors themselves. To accomplish our goal, we developed an application that matches tutors and students instantly based on several criterion.
+			</p>
 		</div>
+ 		
+ 		<h2 class="centered subtitle">Our Vision</h2>
+
+		<div class='content'>	
+			<p>
+			  As we reviewed for finals last year, we had many last-minute questions which could not be	answered as professors were not holding office hours and the school’s learning center was	closed. We hoped that we could find someone to answer our questions at any time we wished. The ideal situation we had in mind was discovering that the person who sat next to	you at the library could answer your questions as he took a study break. We also thought it would be helpful to earn spending money by answering others’ questions as they studied for their finals. Therefore, we decided to make this dream come true by creating an application that instantly matches the academic needs among students. We hope to make students’ “tutoring” and “being tutored” experiences as smooth as possible so “tutoring” no longer is a serious and formal teaching session but a casual intellectual conversation among students.
+			</p>
+		</div>
+		
 	</div><!-- /row -->
 </div><!-- /container -->

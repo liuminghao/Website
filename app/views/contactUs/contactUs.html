@@ -3,28 +3,19 @@
     #background { background-image: url('../images/backgrounds/aboutContact.png'); }
   </style>
   <div class="row centered title">
-    <div class='col-xs-3'></div>
-    <div class='col-xs-9'>
-      <h1>Contact Us</h1>
-    </div>
+    <h1>Contact Us</h1>
   </div>
 
   <div class="vertSpace25"></div>
 
   <div class="row">
-    <div class="col-xs-3" ng-controller='viewCtrl'>
-      <img src="images/logoWithHelpers.png"/>
+    <h2 class="subtitle centered">Join Us</h2>
 
-      <div class="radio">
-        <label><input ui-sref='contactUs.press' ng-checked='checkPage("press")' type="radio">Press</label>
-      </div>
-      <div class="radio">
-        <label><input ui-sref='contactUs.joinUs' ng-checked='checkPage("joinUs")' type="radio">Join Us</label>
-      </div>
-    </div>
+    <p class="content centered">If you are interested in joining our team, please email us at <a href="mailto:info@helpers.io.">info@helpers.io</a>.</p>
 
-    <div class="col-xs-9">
-      <div ui-view></div>
-    </div>
+    <h2 class="subtitle centered">Press</h2>
+
+    <p class="content centered">For press inquiries, please email us at <a href="mailto:info@helpers.io." class="STYLE6">info@helpers.io</a>.</p>
+
   </div>
 </div>
