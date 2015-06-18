@@ -1,0 +1,3 @@
+<style>#background {
+    background-image: url('../images/backgrounds/signup.png');
+  }</style> <div class="vertSpace25"></div> <div class="form-container centered" ng-controller="betaCtrl"> <form ng-submit="checkPassword()"> <h1> Helpers Website closed beta </h1> <br> <h3> If you have been invited to the beta please type the password below. </h3> <br> <div class="form-group"> <input type="password" ng-model="subPass" placeholder="Input password" required> </div> <br> <div class="form-group"> <button class="btn btn-success" type="submit"> Submit</button> </div> </form> <div ng-show="failed" class="centered"> <h3> Incorrect password</h3> </div> </div>

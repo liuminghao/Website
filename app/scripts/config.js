@@ -3,10 +3,15 @@
 var app = angular.module('HelpersApp');
 
 app.config( function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/home');
+	$urlRouterProvider.otherwise('/beta');
 	//$locationProvider.html5Mode(true);
 
 	$stateProvider
+
+    .state('beta', {
+      url: '/beta',
+      templateUrl: '../views/beta.html'
+    })
 
 		.state('home', {
 			url: '/home',

@@ -62,7 +62,7 @@
       <label for="school" class="control-label col-xs-2">School</label>
 
       <div class="col-xs-10">
-        <input class="form-control" id="school" placeholder="School" ng-model="account.school" required>
+        <input class="form-control" id="school" placeholder="School" ng-model="newUser.school" required>
       </div>
     </div>
 
@@ -70,7 +70,7 @@
       <label for="school" class="control-label col-xs-2">Date of Birth</label>
 
       <div class="col-xs-3">
-        <select class="form-control" ng-model="account.profile.MoB" required>
+        <select class="form-control" ng-model="newUser.profile.MoB" required>
           <option value="1">January</option>
           <option value="2">February</option>
           <option value="3">March</option>
@@ -87,13 +87,13 @@
       </div>
 
       <div class="col-xs-3">
-        <select class="form-control" ng-model="account.profile.DoB" required>
+        <select class="form-control" ng-model="newUser.profile.DoB" required>
           <option value="{{day}}" ng-repeat="day in range(1, 31)">{{day}}</option>
         </select>
       </div>
 
       <div class="col-xs-4">
-        <select class="form-control" ng-model="account.profile.YoB" required>
+        <select class="form-control" ng-model="newUser.profile.YoB" required>
           <option ng-repeat="year in range(1925, 2015)" value="{{year}}">{{year}}</option>
         </select>
       </div>
@@ -105,10 +105,32 @@
       </h2>
     </div>
 
-
-    <div class="centered">
-      <button class="btn btn-success" type="submit">Signup!</button>
+    <div ng-hide="subscribe">
+      <div class="centered">
+        <button class="btn btn-success" type="submit">Signup!</button>
+      </div>
     </div>
   </form>
+
+  <div ng-show="subscribe">
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+      <form action="//helpers.us11.list-manage.com/subscribe/post?u=ac52c0e2e1d3f827076d7c72b&amp;id=680f362ae2"
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+            target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          <input ng-show="false" type="email" value="" ng-model="newUser.email" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;"><input type="text"
+                                                                 name="b_ac52c0e2e1d3f827076d7c72b_680f362ae2"
+                                                                 tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
+                                                id="mc-embedded-subscribe"
+                                    class="button"></div>
+        </div>
+      </form>
+    </div>
+    <!--End mc_embed_signup-->
+  </div>
 
 </div>

@@ -26,7 +26,7 @@
 <![endif]-->
 
 <div id="background">
-  <div ng-controller="loginCtrl">
+  <div ng-controller="loginCtrl" ng-hide="">
     <nav class="navbar navbar-default transparent">
       <div class="container-fluid">
         <div class="vertSpace2"></div>
@@ -96,7 +96,7 @@
         <li><p ui-sref="academicIntegrity" class="btn btn-link">Academic Integrity</p></li>
         <li><p ui-sref="safetyTips" class="btn btn-link">Safety Tips</p></li>
       </ul>
-      <p>&copy; Helpers Technology, Inc 2014-2015 | All Rights Reserved</p>
+      <p class="footer">&copy; Helpers Technology, Inc 2014-2015 | All Rights Reserved</p>
     </div>
   </div>
 
@@ -136,6 +136,7 @@
 <script src="scripts/controllers/home.js"></script>
 <script src="scripts/controllers/scroll.js"></script>
 <script src="scripts/controllers/account.js"></script>
+<script src="scripts/controllers/beta.js"></script>
 <script src="scripts/directives/modal.js"></script>
 <script src="scripts/factories/user.js"></script>
 <script src="scripts/factories/functions.js"></script>

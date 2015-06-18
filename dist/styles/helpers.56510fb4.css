@@ -113,6 +113,9 @@ a:hover {
   width: 400px;
 }
 
+.footer {
+  font-size: 12px;
+}
 
 /* ID's */
 #background {
