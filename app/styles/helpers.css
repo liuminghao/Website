@@ -75,6 +75,7 @@ a:hover {
 .vertSpace5 { margin-bottom: 5%; }
 .vertSpace8 { margin-bottom: 8%; }
 .vertSpace10 { margin-bottom: 10%; }
+.vertSpace15 { margin-bottom: 15%; }
 .vertSpace20 { margin-bottom: 20%; }
 .vertSpace25 { margin-bottom: 25%; }
 .vertSpace40 { margin-bottom: 40%; }
@@ -97,7 +98,7 @@ a:hover {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -106,7 +107,7 @@ a:hover {
 }
 
 .icon-large {
-  font-size: 30px;
+  font-size: 60px;
 }
 
 .modal-dialog {

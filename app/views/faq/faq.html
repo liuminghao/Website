@@ -6,39 +6,24 @@
     }
   </style>
   <!--Page title-->
-  <div class="row centered topbar">
-    <div class='col-xs-3'></div>
-    <div class='col-xs-9'>
-      <h1>FAQ</h1>
-    </div>
+  <div class="row centered">
+    <h1>FAQ</h1>
   </div>
 
   <div class="vertSpace25"></div>
 
-  <div class="row" ng-controller='faqCtrl'>
-    <!-- Side Navigation Bar-->
-    <div class="col-xs-3" ng-controller='viewCtrl'>
-      <img src="images/logoWithHelpers.png"/>
+  <div class="row centered" ng-controller='faqCtrl'>
+    <p class="btn btn-info" ui-sref="faq.student">
+      For Students
+    </p>
 
-      <p>FAQ</p>
+    <p class="btn btn-info" ui-sref="faq.everyone">
+      For Everyone
+    </p>
 
-      <div class="form-group">
-        <div class="radio nav_title">
-          <label><input type="radio" ng-checked="checkPage('everyone')" ui-sref="faq.everyone">For Everyone</label>
-        </div>
-
-
-        <div class="radio nav_title">
-          <label><input type="radio" ng-checked="checkPage('tutor')" ui-sref="faq.tutor">For Tutors</label>
-        </div>
-
-
-        <div class="radio nav_title">
-          <label><input type="radio" ng-checked="checkPage('student')" ui-sref="faq.student">For Students</label>
-        </div>
-      </div>
-    </div>
-    <!-- /side-nav-->
+    <p class="btn btn-info" ui-sref="faq.tutor">
+      For Tutors
+    </p>
 
     <div ui-view></div>
   </div>

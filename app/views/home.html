@@ -5,30 +5,32 @@
     }
   </style>
   <div class='row'>
-    <div class="jumbotron transparent"><!-- landing -->
-      <div class="centered">
-        <img src="../images/Home/longLogo.png" class="img-responsive img-centered"/>
+    <div class="jumbotron transparent centered"><!-- landing -->
+      <div class="vertSpace5"></div>
 
-        <div id="subtitle">
-          <h4>An efficient platform for you to connect with tutors and students.</h4>
-        </div>
+      <img src="../images/Home/longLogo.png" class="img-responsive img-centered"/>
 
-        <div class="vertSpace5"></div>
+      <div class="vertSpace5"></div>
 
-        <div>
-          <button class="btn btn-default" type="button" ui-sref='preSignup'><strong>Become a
-            Student</strong></button>
-          <button class="btn btn-default" type="button" ui-sref='preSignup'><strong>Become a
-            Tutor</strong></button>
-        </div>
+      <div id="subtitle vertSpace5">
+        <h4>An efficient platform for you to connect with tutors and students.</h4>
       </div>
+
+      <div>
+        <button class="btn btn-success btn-lg" type="button"
+                ui-sref='preSignup'><strong>Join Helpers!</strong></button>
+      </div>
+
+      <div class="vertSpace15"></div>
+
+      <span class="glyphicon glyphicon-download icon-large white"></span>
     </div>
     <!-- /landing -->
   </div>
   <!-- /row -->
 </div>
 
-<div class="vertSpace25"></div>
+<div class="vertSpace5"></div>
 
 <div ng-controller="homeCtrl">
   <div ng-repeat="page in homePages" style="background: rgba({{page.background}}, .4)">
@@ -41,6 +43,8 @@
             {{page.title}}
           </h1>
 
+          <div class="vertSpace5"></div>
+
           <div class="row centered">
             <div class="col-xs-4">
               <h5 class="subtitle">For Students...</h5>
@@ -49,7 +53,7 @@
             </div>
 
             <div class="col-xs-4 centered">
-              <img class="img-responsive img-centered" src="../images/Home/iPhone_5s.png"/>
+              <img class="img-responsive img-centered" style="width: 70%" src="{{page.centerImg}}"/>
             </div>
 
             <div class="col-xs-4">
@@ -61,7 +65,7 @@
         </div>
       </div>
       <div class="vertSpace10"></div>
+    </div>
   </div>
-</div>
-<!-- /whatever... -->
+  <!-- /whatever... -->
 </div>
