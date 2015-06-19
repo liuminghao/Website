@@ -12,18 +12,20 @@
 
   <div class="vertSpace25"></div>
 
-  <div class="row centered" ng-controller='faqCtrl'>
-    <p class="btn btn-info" ui-sref="faq.student">
-      For Students
-    </p>
+  <div class="row" ng-controller='faqCtrl'>
+    <div class="centered vertSpace5">
+      <p class="btn btn-info" ui-sref="faq.tutor">
+        For Tutors
+      </p>
 
-    <p class="btn btn-info" ui-sref="faq.everyone">
-      For Everyone
-    </p>
+      <p class="btn btn-info" ui-sref="faq.everyone">
+        For Everyone
+      </p>
 
-    <p class="btn btn-info" ui-sref="faq.tutor">
-      For Tutors
-    </p>
+      <p class="btn btn-info" ui-sref="faq.student">
+        For Students
+      </p>
+    </div>
 
     <div ui-view></div>
   </div>

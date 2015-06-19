@@ -2,18 +2,15 @@
 
 var app = angular.module('HelpersApp');
 
-app.controller('loginCtrl', function ($scope, $state, range, loginApi, user) {
-  $scope.loginAttempt = function () {
-    var result = loginApi.login($scope.loginDetails);//Call loginService API
-
-    if (result.error) {
-      if (result) {
-        $scope.failedLogin(result);
-      } else {
-        $scope.signedIn = true;
-        $state.go('account.genInfo');
-        $scope.account = user.login(result);//Both sets scope.account to result and saves result in user factory
-      }
+app.controller('loginCtrl', function ($scope, $state, range, loginApi) {
+  $scope.loginAttempt = function (loginDetails) {
+    var result = loginApi.login(loginDetails);//Call loginService API
+    console.log(result);
+    if (result) {
+      console.log('hi');
+      $scope.signedIn = true;
+      $state.go('account.genInfo');
+      $scope.account = user.login(result);
     }
   };
 

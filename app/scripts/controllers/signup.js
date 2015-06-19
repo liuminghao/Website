@@ -21,7 +21,7 @@ app.controller('signupCtrl', function($scope, $state, range, registerUserApi, af
 	};
 
 	$scope.checkEmail = function() {
-    if ($scope.confirm_email === $scope.newUser.email) {
+    if ($scope.confirmEmail === $scope.newUser.email) {
       $scope.emailValidate = true;
     } else {
       $scope.emailValidate = false;
@@ -36,7 +36,7 @@ app.controller('signupCtrl', function($scope, $state, range, registerUserApi, af
 
 	$scope.register = function(newUser, isValid) {
 		if ($scope.checkValid(isValid)) {
-			var registered = registerUserApi.register(newUser);
+      var registered = registerUserApi.register(newUser);
       if (registered) {
         $state.go('account/genInfo');
       } else {

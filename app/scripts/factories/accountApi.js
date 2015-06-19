@@ -6,9 +6,9 @@ app.factory('registerUserApi', function ($http) {
   return {
     register: function (userInfo) {
       var $promise = $http({
-        method: 'POST',
-        url: 'http://54.172.140.235/api/v1/createuser/',
-        headers: {'Content-Type': 'application/json'},
+        method: "POST",
+        url: "http://54.172.140.235/api/v1/createuser/",
+        headers: {"Content-Type": "application/json"},
         data: JSON.stringify(userInfo)
       });
 
@@ -26,17 +26,16 @@ app.factory('registerUserApi', function ($http) {
 
 app.factory('loginApi', function ($http) {
   return {
-    login: function (user) {
+    login: function (loginDetails) {
       var $promise = $http({
         method: 'POST',
-        url: 'http://54.172.140.235/api/v1/user/login/',
-        headers: {'Content-Type': 'application/json'},
-        data: JSON.stringify(user)
+        url:  'http://54.172.140.235/api/v1/user/login/',
+        data: JSON.stringify(loginDetails),
+        headers: { 'Content-Type': 'application/json'}
       });
 
-      $promise.success(function (result) {//The user logged in successfully
-        return result;
-      }).error(function (result) {//The user's credentials were invalid
+      $promise.success(function(result) {
+
         return result;
       });
     }
