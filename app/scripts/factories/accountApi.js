@@ -27,16 +27,11 @@ app.factory('registerUserApi', function ($http) {
 app.factory('loginApi', function ($http) {
   return {
     login: function (loginDetails) {
-      var $promise = $http({
+      return $http({
         method: 'POST',
-        url:  'http://54.172.140.235/api/v1/user/login/',
+        url: 'http://54.172.140.235/api/v1/user/login/',
         data: JSON.stringify(loginDetails),
-        headers: { 'Content-Type': 'application/json'}
-      });
-
-      $promise.success(function(result) {
-
-        return result;
+        headers: {'Content-Type': 'application/json'}
       });
     }
   };
@@ -142,7 +137,7 @@ app.factory('deleteUserApi', function ($http) {
 
       $promise.success(function (result) {
         return result;
-      }).error(function() {
+      }).error(function () {
         console.log('Delete error');
       });
     }

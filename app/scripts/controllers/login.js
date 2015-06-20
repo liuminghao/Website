@@ -2,16 +2,17 @@
 
 var app = angular.module('HelpersApp');
 
-app.controller('loginCtrl', function ($scope, $state, range, loginApi) {
+app.controller('loginCtrl', function ($scope, $state, range, loginApi, user) {
   $scope.loginAttempt = function (loginDetails) {
-    var result = loginApi.login(loginDetails);//Call loginService API
-    console.log(result);
-    if (result) {
-      console.log('hi');
+    var $promise = loginApi.login(loginDetails);
+
+    $promise.success(function(result) {
       $scope.signedIn = true;
       $state.go('account.genInfo');
       $scope.account = user.login(result);
-    }
+    }).error(function(result){
+      $scope.failedLogin(result);
+    })
   };
 
   $scope.failedLogin = function (result) {
@@ -19,12 +20,10 @@ app.controller('loginCtrl', function ($scope, $state, range, loginApi) {
     $scope.loginDetails.password = '';
 
     if (result.error === 100101) {
-      console.log('Incorrect username and or password');
+      alert('Incorrect username and or password');
     } else if (result.error === 100103) {
-      console.log('Such a user does not exist');
-    } else {
-      console.log('Server error');
-    }//Update this to print info to the user
+      alert('Such a user does not exist');
+    } else alert('Server error');//Update alert method
   };
 
   $scope.logOut = function () {
