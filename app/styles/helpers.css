@@ -58,6 +58,8 @@ a:hover {
 
     .col-centered { float: none; margin: 0 auto; }
 
+
+
 .centered { text-align: center; }
 
 .vecticalButton { vertical-align: center; }
@@ -89,7 +91,10 @@ a:hover {
   background: transparent !important;
 }
 
-.white { color: white; }
+.white {
+  color: white;
+  text-color: white;
+}
 
 .subtitle {
   font-size: 25px;
@@ -120,7 +125,8 @@ a:hover {
 
 /* ID's */
 #background {
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    margin-top: -3%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  margin-top: -3%;
+  padding-bottom: 10%;
 }

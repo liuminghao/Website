@@ -19,6 +19,8 @@ var app = angular
     'ui.router'
   ]);
 
-  app.run(function($rootScope, $state) {
-      $rootScope.$state = $state;
-    });//On launch assign $state to general rootScope
+app.run(function ($rootScope, $state) {
+  $rootScope.$state = $state;
+});//On launch assign $state to general rootScope
+
+

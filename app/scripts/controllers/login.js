@@ -2,7 +2,7 @@
 
 var app = angular.module('HelpersApp');
 
-app.controller('loginCtrl', function ($scope, $state, $http, range, loginApi, user) {
+app.controller('loginCtrl', function ($scope, $state, $rootScope, range, loginApi, user) {
   $scope.loginAttempt = function (loginDetails) {
     var $promise = loginApi.login(loginDetails);
 

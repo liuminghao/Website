@@ -31,10 +31,6 @@ app.controller('accountCtrl', function ($scope, updateInfoApi, getInfoApi, user)
       source: 'genInfo'
     },
     {
-      title: 'Card Information',
-      source: 'cardInfo'
-    },
-    {
       title: 'Transaction History',
       source: 'transactionHistory'
     },

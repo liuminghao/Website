@@ -8,20 +8,48 @@ app.config( function($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: '../views/home.html'
+      views: {
+        'title': {
+          templateUrl: '../views/homeLanding.html'
+        },
+        'body': {
+          templateUrl: '../views/homeBody.html'
+        }
+      }
 		})
 		.state('aboutUs', {
 			url: '/aboutUs',
-			templateUrl: '../views/aboutUs.html'
+      views: {
+        'title': {
+          template: 'About us'
+        },
+        'body': {
+          templateUrl: '../views/aboutUs.html'
+        }
+      }
 		})
 		.state('contactUs', {
 			url: '/contactUs',
-			templateUrl: '../views/contactUs.html'
+      views: {
+        'title': {
+          template: 'Contact Us'
+        },
+        'body': {
+          templateUrl: '../views/contactUs.html'
+        }
+      }
 		})
 		.state('faq', {
 			abstract: true,
 			url: '/faq',
-			templateUrl: '../views/faq/faq.html'
+      views: {
+        'title': {
+          template: 'FAQ'
+        },
+        'body': {
+          templateUrl: '../views/faq/faq.html'
+        }
+      }
 		})
 				.state('faq.everyone', {
 					url: '/everyone',
@@ -37,44 +65,85 @@ app.config( function($stateProvider, $urlRouterProvider) {
 				})
 		.state('preSignup', {
 			url: '/preSignup',
-			templateUrl: '../views/preSignup.html'
+      views: {
+        'title': {
+          template: ' '
+        },
+        'body': {
+          templateUrl: '../views/preSignup.html'
+        }
+      }
 		})
 		.state('signup', {
 			url: '/signup',
-			templateUrl: '../views/signup.html'
-		})
-		.state('footers', {
-			abstract: true,
-			url: '/footers'
+      views: {
+        'title': {
+          template: 'Signup'
+        },
+        'body': {
+          templateUrl: '../views/signup.html'
+        }
+      }
 		})
 				.state('safetyTips', {
 					url: '/safetyTips',
-					templateUrl: '../views/footers/safetyTips.html'
+					views: {
+            'title': {
+              template: 'Safety Tips'
+            },
+            'body': {
+              templateUrl: '../views/footers/safetyTips.html'
+            }
+          }
 				})
 				.state('academicIntegrity', {
 					url: '/academicIntegrity',
-					templateUrl: '../views/footers/academicIntegrity.html'
+          views: {
+            'title': {
+              template: 'Academic Integrity'
+            },
+            'body': {
+              templateUrl: '../views/footers/academicIntegrity.html'
+            }
+          }
 				})
 				.state('termsOfUse', {
 					url: '/termsOfUse',
-					templateUrl: '../views/footers/termsOfUse.html'
+          views: {
+            'title': {
+              template: 'Terms of Use'
+            },
+            'body': {
+              templateUrl: '../views/footers/termsOfUse.html'
+            }
+          }
 				})
 				.state('privacy', {
 					url: '/privacy',
-					templateUrl: '../views/footers/privacy.html'
+          views: {
+            'title': {
+              template: 'Privacy'
+            },
+            'body': {
+              templateUrl: '../views/footers/privacy.html'
+            }
+          }
 				})
 		.state('account', {
 			abstract: true,
 			url: '/account',
-			templateUrl: '../views/account/account.html'
+      views: {
+        'title': {
+          template: 'My Account'
+        },
+        'body': {
+          templateUrl: '../views/account/account.html'
+        }
+      }
 		})
 				.state('account.genInfo', {
 					url: '/genInfo',
 					templateUrl: '../views/account/genInfo.html'
-				})
-				.state('account.cardInfo', {
-					url: '/cardInfo',
-					templateUrl: '../views/account/cardInfo.html'
 				})
 				.state('account.transactionHistory', {
 					url: '/transactionHistory',

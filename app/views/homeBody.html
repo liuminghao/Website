@@ -1,41 +1,6 @@
-﻿<div class='container'>
-  <style>
-    #background {
-      background-image: url('../images/backgrounds/homeLanding.png');
-    }
-  </style>
-  <div class='row'>
-    <div class="jumbotron transparent centered"><!-- landing -->
-      <div class="vertSpace5"></div>
-
-      <img src="../images/Home/longLogo.png" class="img-responsive img-centered"/>
-
-      <div class="vertSpace5"></div>
-
-      <div id="subtitle vertSpace5">
-        <h4>An efficient platform for you to connect with tutors and students.</h4>
-      </div>
-
-      <div>
-        <button class="btn btn-success btn-lg" type="button"
-                ui-sref='preSignup'><strong>Join Helpers!</strong></button>
-      </div>
-
-      <div class="vertSpace15"></div>
-
-      <span class="glyphicon glyphicon-download icon-large white"></span>
-    </div>
-    <!-- /landing -->
-  </div>
-  <!-- /row -->
-</div>
-
-<div class="vertSpace5"></div>
-
-<div ng-controller="homeCtrl">
+<div ng-controller="homeCtrl" id="evers">
   <div ng-repeat="page in homePages" style="background: rgba({{page.background}}, .4)">
     <div class="container">
-      <div class="vertSpace10"></div>
       <div class="row">
         <div class="col-xs-12">
           <h1 class="centered title">
