@@ -101,10 +101,14 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <h2 class="centered">
+    <div class="form-group centered">
+      <h3>
         <input type="checkbox" ng-model="subscribe" value="Subscribe"> Subscribe to our mailing list.
-      </h2>
+      </h3>
+      <h3>
+        <input type="checkbox" ng-model="termsOfUse"> I have read and agreed to the Helpers <a
+        ui-sref="termsOfUse">Terms of Use</a>
+      </h3>
     </div>
 
     <div ng-hide="subscribe">

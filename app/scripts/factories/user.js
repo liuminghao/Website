@@ -21,5 +21,11 @@ var app = angular.module('HelpersApp');
 			}
 		};
 
+    userService.logout = function() {
+      user = null;
+      $localStorage.account = user;
+      return user;
+    };
+
 		return userService;
 	});

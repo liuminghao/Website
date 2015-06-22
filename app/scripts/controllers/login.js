@@ -2,7 +2,7 @@
 
 var app = angular.module('HelpersApp');
 
-app.controller('loginCtrl', function ($scope, $state, range, loginApi, user) {
+app.controller('loginCtrl', function ($scope, $state, $http, range, loginApi, user) {
   $scope.loginAttempt = function (loginDetails) {
     var $promise = loginApi.login(loginDetails);
 
@@ -11,26 +11,29 @@ app.controller('loginCtrl', function ($scope, $state, range, loginApi, user) {
       $state.go('account.genInfo');
       $scope.account = user.login(result);
     }).error(function(result){
-      $scope.failedLogin(result);
-    })
+      $scope.failedLogin(result, loginDetails);
+    });
   };
 
-  $scope.failedLogin = function (result) {
-    $scope.loginDetails.username_or_email = '';
-    $scope.loginDetails.password = '';
+  $scope.failedLogin = function (result, loginDetails) {
+    loginDetails.username_or_email = '';
+    loginDetails.password = '';
 
     if (result.error === 100101) {
       alert('Incorrect username and or password');
     } else if (result.error === 100103) {
       alert('Such a user does not exist');
-    } else alert('Server error');//Update alert method
+    } else {
+      alert('Server error');
+    }//Update alert method
   };
 
   $scope.logOut = function () {
-    $scope.signedIn = false;
-    $scope.account = null;
     $scope.loginPopup = false;
-    $scope.save();
+
+    user.logout();
+    load();
+
     $state.go('home');
   };
 
@@ -52,8 +55,6 @@ app.controller('loginCtrl', function ($scope, $state, range, loginApi, user) {
       $scope.account = null;
     }
   }
-
-
 
   load();//Loads the login account from user factory
   $scope.range = range;//A range from a-b (generally days)

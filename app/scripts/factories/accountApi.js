@@ -5,21 +5,12 @@ var app = angular.module('HelpersApp');
 app.factory('registerUserApi', function ($http) {
   return {
     register: function (userInfo) {
-      var $promise = $http({
+      return $http({
         method: "POST",
         url: "http://54.172.140.235/api/v1/createuser/",
         headers: {"Content-Type": "application/json"},
         data: JSON.stringify(userInfo)
       });
-
-      $promise.success(function (result) {
-        console.log(result);
-        return true;
-      })
-        .error(function (result) {
-          console.log(result);
-          return false;
-        });
     }
   };
 });
@@ -170,6 +161,21 @@ app.factory('validationApi', function ($http) {
         } else {
           console.log('I m afraid I m not sure what went wrong');
         }
+      });
+    }
+  };
+});
+
+app.factory('photoApi', function($http) {
+  return {
+    upload: function(photo) {
+      return $http({
+        method: 'POST',
+        url: 'http://23.23.191.103/api/v1/user/avatarupload/',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: photo
       });
     }
   };

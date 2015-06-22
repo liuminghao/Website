@@ -2,9 +2,12 @@
 
 var app = angular.module('HelpersApp');
 
-app.config( function($stateProvider, $urlRouterProvider) {
+app.config( function($stateProvider, $urlRouterProvider, $httpProvider) {
 	$urlRouterProvider.otherwise('/home');
-	//$locationProvider.html5Mode(true);
+
+  $httpProvider.defaults.useXDomain = true;//Enable cross domain calls
+  delete $http.defaults.headers.common['X-Requested-With'];//Remove the header used to ID Ajax calls which
+  // prevent CORS from working
 
 	$stateProvider
 		.state('home', {
