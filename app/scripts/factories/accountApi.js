@@ -20,7 +20,7 @@ app.factory('loginApi', function ($http) {
     login: function (loginDetails) {
       return $http({
         method: 'POST',
-        url: 'http://54.172.140.235/api/v1/user/login/',
+        url: '/api/v1/user/login/',
         data: JSON.stringify(loginDetails),
         headers: {'Content-Type': 'application/json'}
       });
