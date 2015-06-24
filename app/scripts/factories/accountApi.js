@@ -17,13 +17,13 @@ app.factory('registerUserApi', function ($http) {
 
 app.factory('loginApi', function ($http) {
   return {
-    login: function (loginDetails) {
+    login: function (user) {
       return $http({
         method: 'POST',
-        url: '/api/v1/user/login/',
-        data: JSON.stringify(loginDetails),
-        headers: {'Content-Type': 'application/json'}
-      });
+        url: "http://54.172.140.235/api/v1/user/login/",
+        headers: {"Content-Type": "application/json"},
+        data: JSON.stringify(user)
+      })
     }
   };
 });
@@ -166,9 +166,9 @@ app.factory('validationApi', function ($http) {
   };
 });
 
-app.factory('photoApi', function($http) {
+app.factory('photoApi', function ($http) {
   return {
-    upload: function(photo) {
+    upload: function (photo) {
       return $http({
         method: 'POST',
         url: 'http://23.23.191.103/api/v1/user/avatarupload/',

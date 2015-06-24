@@ -58,8 +58,6 @@ a:hover {
 
     .col-centered { float: none; margin: 0 auto; }
 
-
-
 .centered { text-align: center; }
 
 .vecticalButton { vertical-align: center; }
@@ -93,7 +91,6 @@ a:hover {
 
 .white {
   color: white;
-  text-color: white;
 }
 
 .subtitle {
@@ -112,7 +109,7 @@ a:hover {
 }
 
 .icon-large {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .modal-dialog {
