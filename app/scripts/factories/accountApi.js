@@ -23,7 +23,7 @@ app.factory('loginApi', function ($http) {
         url: "http://54.172.140.235/api/v1/user/login/",
         headers: {"Content-Type": "application/json"},
         data: JSON.stringify(user)
-      })
+      });
     }
   };
 });

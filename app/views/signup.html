@@ -27,29 +27,28 @@
       <label for="password" class="control-label col-xs-2">Password</label>
 
       <div class="col-xs-5">
-        <input class="form-control" type="password" id="password" ng-model="newUser.password" ng-blur="checkPass()"
+        <input class="form-control" type="password" id="password" placeholder="Password" ng-model="newUser.password"
+               ng-blur="checkPass()"
                required>
 
         <p class="help-block centered" ng-show="!passValidate">Passwords do not match</p>
       </div>
 
       <div class="col-xs-5">
-        <input class="form-control" type="password" ng-model="confirm_password" ng-blur="checkPass()" required>
+        <input class="form-control" type="password" placeholder="Confirm password" ng-model="confirm_password"
+        ng-blur="checkPass()"
+               required>
       </div>
     </div>
 
     <div class="form-group">
       <label for="email" class="control-label col-xs-2">Email</label>
 
-      <div class="col-xs-5">
+      <div class="col-xs-10">
         <input type="email" id="email" class="form-control" placeholder="Email" ng-model="newUser.email"
                ng-blur="bcEmail()" required>
 
         <p class="help-block centered" ng-show="!bcValidate">Please enter a Boston College email</p>
-      </div>
-      <div class="col-xs-5">
-        <input type="email" class="form-control" placeholder="Email" ng-model="confirmEmail" ng-blur="checkEmail()"
-               required>
       </div>
     </div>
 
@@ -98,7 +97,9 @@
 
     <div class="form-group centered">
       <h3>
-        <input type="checkbox" ng-model="subscribe" value="Subscribe"> Subscribe to our mailing list.
+        <input type="checkbox" ng-model="subscribe" value="Subscribe" ng-init="subscribe=true"> Subscribe to our
+        mailing
+        list.
       </h3>
       <h3>
         <input type="checkbox" ng-model="termsOfUse"> I have read and agreed to the Helpers <a
@@ -113,7 +114,7 @@
     </div>
   </form>
 
-  <div ng-show="subscribe">
+  <div ng-show="subscribe" class="centered">
     <!-- Begin MailChimp Signup Form -->
     <div id="mc_embed_signup">
       <form action="//helpers.us11.list-manage.com/subscribe/post?u=ac52c0e2e1d3f827076d7c72b&amp;id=680f362ae2"
@@ -126,9 +127,9 @@
           <div style="position: absolute; left: -5000px;"><input type="text"
                                                                  name="b_ac52c0e2e1d3f827076d7c72b_680f362ae2"
                                                                  tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
+          <div class="clear"><input type="submit" value="Signup!" name="subscribe"
                                     id="mc-embedded-subscribe"
-                                    class="button"></div>
+                                    class="btn btn-success btn-lg"></div>
         </div>
       </form>
     </div>

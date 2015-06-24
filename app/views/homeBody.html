@@ -10,7 +10,7 @@
 
           <div class="vertSpace5"></div>
 
-          <div class="row centered">
+          <div class="row centered hidden-xs"><!-- nonmobile screens -->
             <div class="col-xs-4">
               <h5 class="subtitle">For Students...</h5>
 
@@ -26,6 +26,18 @@
 
               <p>{{page.forTutors}}</p>
             </div>
+          </div>
+
+          <div class="row centered visible-xs"><!-- only mobile screens -->
+            <img class="img-responsive img-centered" style="width: 80%" src="{{page.centerImg}}"/>
+
+            <h5 class="subtitle">For Students...</h5>
+
+            <p>{{page.forStudents}}</p>
+
+            <h5 class="subtitle">For Tutors...</h5>
+
+            <p>{{page.forTutors}}</p>
           </div>
         </div>
       </div>

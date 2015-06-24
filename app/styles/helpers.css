@@ -127,3 +127,9 @@ a:hover {
   margin-top: -3%;
   padding-bottom: 10%;
 }
+
+#toTopButton {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
